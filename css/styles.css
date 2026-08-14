@@ -745,13 +745,18 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* Redesigned Booking Modal with Rounded Font (Outfit) */
+/* Redesigned Booking Modal with Rounded Font (Outfit) & No-Wrap Heading */
 .booking-wizard-card {
   background-color: var(--color-bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 3.5rem;
   box-shadow: var(--shadow-hover);
+}
+
+.booking-wizard-card .heading-medium {
+  font-size: clamp(1.4rem, 2.2vw + 0.6rem, 2rem);
+  white-space: nowrap;
 }
 
 .modal-contact-btn {
@@ -873,7 +878,7 @@ textarea.form-control {
   box-shadow: 0 24px 60px rgba(0,0,0,0.5);
 }
 
-/* Footer (3-Column Layout with Store Information) */
+/* Footer Layout & Centered Brand Logo */
 .footer {
   background-color: var(--color-bg-subtle);
   border-top: 1px solid var(--border-color);
@@ -883,16 +888,40 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-columns: 1.2fr 1fr 1.3fr;
   gap: 3.5rem;
   margin-bottom: 4.5rem;
+  align-items: start;
 }
 
-.footer-brand p {
-  color: var(--color-text-muted);
-  margin: 1.2rem 0 1.8rem;
-  max-width: 340px;
-  line-height: 1.8;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-brand .brand-link {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.footer-brand-logo-img {
+  height: 105px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-subtext {
+  font-family: var(--font-rounded);
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--color-palette-berry);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  margin-top: 8px;
 }
 
 .footer-title {
@@ -924,8 +953,36 @@ textarea.form-control {
   justify-content: space-between;
   border-top: 1px solid var(--border-color);
   padding-top: 2.2rem;
-  font-size: 0.9rem;
+}
+
+.footer-copyright-text {
+  font-family: var(--font-rounded);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--color-text-muted);
+}
+
+.crafted-by-text {
+  font-family: var(--font-rounded);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.indigo-phoenix-link {
+  font-weight: 700;
+  color: #000000 !important;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.indigo-phoenix-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
 }
 
 /* Responsive Media Queries */
@@ -958,5 +1015,24 @@ textarea.form-control {
   .brand-subtext {
     font-size: 0.58rem;
     letter-spacing: 0.18em;
+  }
+  .footer-brand-logo-img {
+    height: 80px;
+  }
+  .footer-brand-subtext {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  .booking-wizard-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .booking-wizard-card .heading-medium {
+    white-space: normal;
   }
 }

@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gallery_all: "Όλα",
       contact_eyebrow: "Επικοινωνία",
       contact_title: "Επικοινωνήστε Μαζί Μας",
-      contact_subtitle: "Έχετε ερωτήσεις για τις υπηρεσίες μας, τις βαφές ή τις θεραπείες; Στείλτε μας μήνυμα ή επισκεφθείτε το κατάστημά μας στο Γαλάτσι.",
+      contact_subtitle: "Βρείτε όλες τις πληροφορίες του καταστήματός μας στο Γαλάτσι και κλείστε το ραντεβού σας τηλεφωνικά ή μέσω Instagram.",
       contact_box_title: "Πληροφορίες Καταστήματος",
       contact_box_subtitle: "Για κρατήσεις ραντεβού, καλέστε μας στο τηλέφωνο ή στείλτε μας μήνυμα στο Instagram.",
       contact_address_label: "Διεύθυνση",
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       form_subject_label: "Θέμα",
       form_message_label: "Μήνυμα",
       form_submit_btn: "Αποστολή Μηνύματος",
-      modal_title: "Κλείστε το Ραντεβού σας",
+      modal_title: "Κλείστε το Ραντεβού&nbsp;σας",
       modal_subtitle: "Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.",
       modal_call: "210 2917238",
       modal_ig: "DM Instagram",
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_info_title: "Πληροφορίες Καταστήματος",
       footer_address_val: "Σκύρου 2, Γαλάτσι",
       footer_hours_val: "Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά",
-      footer_rights: "© 2026 S&M Hair Salon. Όλα τα δικαιώματα διατηρούνται."
+      footer_rights: "© 2026 S&M Hair Salon"
     },
     en: {
       nav_home: "Home",
@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_info_title: "Salon Information",
       footer_address_val: "Skyrou 2, Galatsi",
       footer_hours_val: "Mon - Sat: 09:00 - 20:00 • Sun: Closed",
-      footer_rights: "© 2026 S&M Hair Salon. All rights reserved."
+      footer_rights: "© 2026 S&M Hair Salon"
     }
   };
 
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
-        el.textContent = translations[lang][key];
+        el.innerHTML = translations[lang][key];
       }
     });
 
