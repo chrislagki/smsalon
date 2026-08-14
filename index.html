@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&M Hair Salon</title>
+  <meta name="description" content="Το S&M είναι ένα πολυτελές hair salon για κουρέματα ακριβείας, βαφές, balayage, θεραπείες Malibu & K18, και extensions.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header / Navigation Bar with Left Burger & Centered Logo -->
+  <header class="navbar">
+    <div class="container nav-container-centered">
+      
+      <!-- Left Burger Menu Trigger -->
+      <div class="nav-left-burger">
+        <button class="burger-menu-btn" aria-label="Open Navigation Menu">
+          <div class="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <span class="burger-text">Μενού</span>
+        </button>
+      </div>
+
+      <!-- Center Logo with Subtext -->
+      <div class="nav-center-logo">
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.png" alt="S&M Hair Salon" class="brand-logo-img">
+          <span class="brand-subtext">HAIR & BEAUTY SALON</span>
+        </a>
+      </div>
+
+      <!-- Right Actions: Lang Switcher & Booking -->
+      <div class="nav-right-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="el">EL</button>
+          <span>|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="btn btn-green btn-open-booking" data-i18n="nav_book">Κλείστε Ραντεβού</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Slide-Out Side Navigation Drawer -->
+  <div class="nav-drawer-overlay"></div>
+  <aside class="nav-drawer">
+    <div>
+      <div class="nav-drawer-header">
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.png" alt="S&M Hair Salon" style="height: 48px; width: auto;">
+          <span class="brand-subtext" style="font-size: 0.6rem;">HAIR & BEAUTY SALON</span>
+        </a>
+        <button class="nav-drawer-close" aria-label="Close Navigation Menu">✕</button>
+      </div>
+
+      <ul class="drawer-links-list">
+        <li><a href="index.html" class="drawer-link active" data-i18n="nav_home">Αρχική <span>→</span></a></li>
+        <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες <span>→</span></a></li>
+        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί <span>→</span></a></li>
+        <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία <span>→</span></a></li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer-info">
+      <p style="font-weight: 700; color: var(--color-palette-berry); margin-bottom: 0.5rem;" data-i18n="contact_address_label">Διεύθυνση</p>
+      <p style="margin-bottom: 1rem;"><a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer" data-i18n="footer_address_val">Σκύρου 2, Γαλάτσι</a></p>
+      
+      <p style="font-weight: 700; color: var(--color-palette-berry); margin-bottom: 0.5rem;" data-i18n="contact_phone_label">Τηλέφωνο</p>
+      <p style="margin-bottom: 1.5rem;"><a href="tel:+302102917238">210 2917238</a></p>
+
+      <button class="btn btn-green btn-open-booking" style="width: 100%;" data-i18n="nav_book">Κλείστε Ραντεβού</button>
+    </div>
+  </aside>
+
+  <!-- Redesigned Stylish Booking Info Modal -->
+  <div id="booking-modal" class="lightbox-modal">
+    <div class="booking-wizard-card" style="max-width: 520px; width: 90%; text-align: center; position: relative;">
+      <button id="booking-modal-close" style="position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-muted);">✕</button>
+
+      <div class="eyebrow" style="margin-bottom: 0.8rem;">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+        <p class="eyebrow-title" data-i18n="nav_book">Κλείστε Ραντεβού</p>
+        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+        <div class="eyebrow-line"></div>
+      </div>
+
+      <h3 class="heading-medium" style="margin-bottom: 1rem;" data-i18n="modal_title">Κλείστε το Ραντεβού σας</h3>
+      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <a href="tel:+302102917238" class="modal-contact-btn modal-phone-btn">
+          <span data-i18n="modal_call">210 2917238</span>
+        </a>
+        <a href="https://www.instagram.com/sm_hairsalon_maryvitsa/" target="_blank" rel="noopener noreferrer" class="modal-contact-btn modal-ig-btn">
+          <svg class="ig-icon-svg" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span data-i18n="modal_ig">DM Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section & Slider -->
+  <section class="hero-slider-section">
+    <div class="hero-backgrounds">
+      <div class="hero-slide active">
+        <img src="https://cdn.prod.website-files.com/6a7ed896c876854402c4469f/6a7ed899c876854402c44957_pexels-pixabay-458381%20(1).avif" alt="Hair styling model" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="https://cdn.prod.website-files.com/6a7ed896c876854402c4469f/6a7ed899c876854402c4495d_pexels-justebuka-14626783.avif" alt="Balayage hair studio" class="hero-slide-img">
+      </div>
+      <div class="hero-slide">
+        <img src="https://cdn.prod.website-files.com/6a7ed899c876854402c44733/6a7ed899c876854402c44937_pexels-thejeremiahxo-16805589.avif" alt="Hair sculpting" class="hero-slide-img">
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+        <p class="eyebrow-title" data-i18n="hero_welcome">Καλώς Ήρθατε στο S&M Hair Salon</p>
+        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+        <div class="eyebrow-line"></div>
+      </div>
+
+      <h1 class="heading-hero" data-i18n="hero_title">Πάθος για Στυλ, Τέχνη στα Μαλλιά</h1>
+      <p class="hero-subtitle-text" data-i18n="hero_subtitle">Στο S&M Hair Salon προσφέρουμε εξειδικευμένες υπηρεσίες κομμωτικής, βαφών, balayage, θεραπειών Malibu & K18, τοποθέτησης extensions και περιποίησης.</p>
+
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-green" data-i18n="hero_btn_explore">Ανακαλύψτε τις Υπηρεσίες ↓</a>
+        <button class="btn btn-outline btn-open-booking" data-i18n="hero_btn_book">Κλείστε Ραντεβού →</button>
+      </div>
+    </div>
+
+    <div class="slider-timeline-wrapper">
+      <div class="timeline-track">
+        <div class="timeline-progress"></div>
+      </div>
+      <div class="slide-indicators">
+        <button class="indicator-dot active" aria-label="Slide 1"></button>
+        <button class="indicator-dot" aria-label="Slide 2"></button>
+        <button class="indicator-dot" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Introduction Section -->
+  <section id="explore" class="section section-lg">
+    <div class="container">
+      <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+        <div class="eyebrow">
+          <div class="eyebrow-line"></div>
+          <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+          <p class="eyebrow-title" data-i18n="philo_title">Φιλοσοφία</p>
+          <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+          <div class="eyebrow-line"></div>
+        </div>
+
+        <h2 class="heading-large" style="margin-bottom: 1.5rem;" data-i18n="philo_heading">Αναδεικνύουμε τη φυσική ομορφιά των μαλλιών σας.</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.8;" data-i18n="philo_desc">Με έμπειρα χέρια, εξειδίκευση σε θεραπείες Malibu, K18 & Κερατίνης και κορυφαία προϊόντα, δημιουργούμε το αποτέλεσμα των ονείρων σας.</p>
+      </div>
+
+      <div class="images-showcase-row">
+        <div class="showcase-image-card">
+          <img src="https://cdn.prod.website-files.com/6a7ed896c876854402c4469f/6a7ed899c876854402c44957_pexels-pixabay-458381%20(1).avif" alt="Hair styling model">
+        </div>
+        <div class="showcase-image-card">
+          <img src="https://cdn.prod.website-files.com/6a7ed899c876854402c44733/6a7ed899c876854402c449e6_pexels-milad-farhani-52379203-13022159.avif" alt="Balayage hair art">
+        </div>
+        <div class="showcase-image-card">
+          <img src="https://cdn.prod.website-files.com/6a7ed899c876854402c44733/6a7ed899c876854402c44937_pexels-thejeremiahxo-16805589.avif" alt="Precision haircut">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo-Less Faded Pastel Featured Hair Services Section -->
+  <section class="section" style="background-color: var(--color-bg-subtle);">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+        <div>
+          <div class="eyebrow">
+            <div class="eyebrow-line"></div>
+            <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
+            <p class="eyebrow-title" data-i18n="feat_title">Υπηρεσίες Κομμωτηρίου</p>
+          </div>
+          <h2 class="heading-large" data-i18n="feat_heading">Κουρέματα, Βαφές, Balayage & Εξειδικευμένες Θεραπείες.</h2>
+        </div>
+        <a href="services.html" class="btn btn-outline mob-hidden" data-i18n="feat_view_all">Δείτε Όλες τις Υπηρεσίες →</a>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1: Balayage -->
+        <div class="service-card">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">
+              <p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Βαφές & Balayage</p>
+            </div>
+            <h3 class="service-card-title" data-i18n="srv_balayage">Balayage</h3>
+            <p class="service-card-desc" data-i18n="srv_balayage_desc">Signature balayage για φυσικές, ομαλές μεταβάσεις χρώματος και ηλιόλουστο αποτέλεσμα.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking">
+                <span data-i18n="book_btn">Κράτηση</span>
+                <div class="circle-icon">→</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2: Malibu HEADLAB -->
+        <div class="service-card">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">
+              <p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p>
+            </div>
+            <h3 class="service-card-title" data-i18n="srv_malibu_headlab">Malibu HEADLAB</h3>
+            <p class="service-card-desc" data-i18n="srv_malibu_headlab_desc">Προηγμένη διάγνωση & θεραπεία εξυγίανσης τριχωτού και μαλλιών Malibu HEADLAB.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking">
+                <span data-i18n="book_btn">Κράτηση</span>
+                <div class="circle-icon">→</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3: K18 -->
+        <div class="service-card">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">
+              <p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p>
+            </div>
+            <h3 class="service-card-title" data-i18n="srv_k18">Θεραπεία K18</h3>
+            <p class="service-card-desc" data-i18n="srv_k18_desc">Επαναστατική μοριακή θεραπεία K18 για επανόρθωση της τρίχης σε 4 λεπτά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking">
+                <span data-i18n="book_btn">Κράτηση</span>
+                <div class="circle-icon">→</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 4: Tapes Extensions -->
+        <div class="service-card">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">
+              <p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions & Αποτρίχωση</p>
+            </div>
+            <h3 class="service-card-title" data-i18n="srv_tapes">Τοποθέτηση Tapes</h3>
+            <p class="service-card-desc" data-i18n="srv_tapes_desc">Εξειδικευμένη τοποθέτηση τρέσας/tapes extensions για φυσικό μήκος και όγκο.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking">
+                <span data-i18n="book_btn">Κράτηση</span>
+                <div class="circle-icon">→</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with 3 Columns: Brand, Explore, Store Info -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link" style="margin-bottom: 1rem; align-items: flex-start;">
+            <img src="images/logo.png" alt="S&M Hair Salon" class="brand-logo-img">
+            <span class="brand-subtext">HAIR & BEAUTY SALON</span>
+          </a>
+          <p data-i18n="footer_desc">Το S&M είναι ένα σύγχρονο πολυτελές hair salon αφιερωμένο στο κούρεμα ακριβείας, τις εξειδικευμένες τεχνικές χρώματος, τις θεραπείες Malibu & K18 και την τοποθέτηση extensions.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer_explore">Εξερεύνηση</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav_home">Αρχική</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Υπηρεσίες</a></li>
+            <li><a href="gallery.html" data-i18n="nav_gallery">Γκαλερί</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες Καταστήματος</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="footer_address_val">Σκύρου 2, Γαλάτσι</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+302102917238">
+                <span>210 2917238</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sm_hairsalon_maryvitsa/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px;">
+                <svg style="width: 15px; height: 15px; fill: currentColor; vertical-align: middle;" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <span style="color: var(--color-text-muted);" data-i18n="footer_hours_val">Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2026 S&M Hair Salon. Όλα τα δικαιώματα διατηρούνται.</p>
+        <a href="index.html" class="brand-link" style="align-items: flex-end;">
+          <img src="images/logo.png" alt="S&M Hair Salon" class="brand-logo-img">
+          <span class="brand-subtext" style="font-size: 0.6rem;">HAIR & BEAUTY SALON</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
