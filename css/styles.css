@@ -106,9 +106,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .heading-hero {
-  font-size: clamp(2.8rem, 5.5vw + 1rem, 4.8rem);
+  font-size: clamp(1.6rem, 3.4vw + 0.6rem, 3.6rem);
+  white-space: nowrap;
   letter-spacing: -0.02em;
   color: var(--color-text-main);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .heading-large {
@@ -226,6 +230,22 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-palette-cream);
   border-color: var(--color-palette-berry);
   transform: translateY(-2px);
+}
+
+.filter-tab-btn {
+  font-size: 0.88rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  border: 1.5px solid var(--color-palette-berry);
+}
+
+.filter-tab-btn.active {
+  background-color: var(--color-palette-berry) !important;
+  color: #ffffff !important;
+  border-color: var(--color-palette-berry) !important;
+  box-shadow: 0 6px 18px rgba(178, 87, 128, 0.28);
 }
 
 .btn-circle {
@@ -476,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-fast);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .drawer-link:hover, .drawer-link.active {
@@ -498,6 +518,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 720px;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   background-color: var(--color-bg-subtle);
 }
@@ -526,6 +547,15 @@ h1, h2, h3, h4, h5, h6 {
   filter: brightness(0.9) contrast(0.96);
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92) contrast(0.96);
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -538,9 +568,14 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 10;
   text-align: center;
-  max-width: 860px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-subtitle-text {
@@ -807,44 +842,69 @@ textarea.form-control {
   fill: currentColor;
 }
 
-/* Gallery & Lightbox */
+/* Gallery & Lightbox - True CSS Masonry Layout */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  column-count: 3;
+  column-gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    column-count: 1;
+  }
 }
 
 .gallery-item {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 1.8rem;
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 1;
   cursor: pointer;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   transition: transform var(--transition-smooth);
 }
 
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
 .gallery-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .gallery-item-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(178, 87, 128, 0.4);
+  background: linear-gradient(to top, rgba(178, 87, 128, 0.75) 0%, rgba(178, 87, 128, 0.2) 60%, transparent 100%);
   color: #fff;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding: 1.8rem;
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
@@ -888,7 +948,7 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.3fr;
+  grid-template-columns: 1.1fr 0.82fr 1.1fr 1.5fr;
   gap: 3.5rem;
   margin-bottom: 4.5rem;
   align-items: start;
@@ -1036,3 +1096,261 @@ textarea.form-control {
     white-space: normal;
   }
 }
+
+/* Premium Opening Hours Component */
+.hours-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+}
+
+.hours-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.85rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid rgba(243, 159, 169, 0.25);
+  transition: all 0.2s ease;
+}
+
+.hours-day-row:hover {
+  background-color: #ffffff;
+  border-color: rgba(243, 159, 169, 0.6);
+  box-shadow: 0 4px 12px rgba(243, 159, 169, 0.1);
+  transform: translateY(-1px);
+}
+
+.hours-day-row.is-today {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 225, 230, 0.6));
+  border: 1.5px solid var(--color-palette-berry, #c86d7c);
+  box-shadow: 0 4px 14px rgba(200, 109, 124, 0.18);
+}
+
+.hours-day-name {
+  font-weight: 400;
+  font-size: 0.93rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.today-tag {
+  display: none !important;
+}
+
+.hours-time-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.time-pill {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  background-color: #ffffff;
+  border: 1px solid rgba(200, 109, 124, 0.3);
+  padding: 3px 10px;
+  border-radius: 14px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.closed-pill {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  background-color: rgba(200, 109, 124, 0.08);
+  border: 1px solid rgba(200, 109, 124, 0.25);
+  padding: 3px 12px;
+  border-radius: 14px;
+  white-space: nowrap;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.open {
+  background-color: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+  border: 1px solid rgba(46, 125, 50, 0.35);
+}
+
+.status-badge.open .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+  box-shadow: 0 0 8px #2e7d32;
+  animation: pulse-dot-green 1.8s infinite;
+}
+
+.status-badge.closed {
+  background-color: rgba(198, 40, 40, 0.12);
+  color: #c62828;
+  border: 1px solid rgba(198, 40, 40, 0.35);
+}
+
+.status-badge.closed .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #c62828;
+}
+
+@keyframes pulse-dot-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(46, 125, 50, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+}
+
+/* Compact Footer Table Scaling */
+.footer-hours-compact {
+  gap: 0.28rem;
+  margin-top: 0;
+  max-width: 310px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-hours-compact .hours-day-row {
+  padding: 0.28rem 0.55rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-hours-compact .hours-day-name {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  gap: 4px;
+}
+
+.footer-hours-compact .today-tag {
+  font-size: 0.55rem;
+  padding: 1px 4px;
+  border-radius: 6px;
+}
+
+.footer-hours-compact .time-pill {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.footer-hours-compact .closed-pill {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .heading-hero {
+    white-space: normal;
+  }
+}
+
+/* ==========================================================================
+   Masonry Gallery Layout (4 Columns Desktop / Staggered Uneven Heights)
+   ========================================================================== */
+.gallery-grid {
+  column-count: 4;
+  column-gap: 1.2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 1.2rem;
+  position: relative;
+  border-radius: var(--border-radius-card, 14px);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  transition: opacity 0.2s ease, transform 0.25s ease;
+  background-color: var(--color-bg-surface, #ffffff);
+}
+
+.gallery-item:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--border-radius-card, 14px);
+}
+
+/* Uneven / Staggered Aspect Ratios */
+.gallery-item.ratio-tall img {
+  aspect-ratio: 9 / 16;
+}
+
+.gallery-item.ratio-medium img {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-item.ratio-square img {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item.ratio-compact img {
+  aspect-ratio: 4 / 5;
+}
+
+.gallery-item.ratio-wide img {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 992px) {
+  .gallery-grid {
+    column-count: 3;
+    column-gap: 1rem;
+  }
+  .gallery-item {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 0.8rem;
+  }
+  .gallery-item {
+    margin-bottom: 0.8rem;
+  }
+}
+
+
+
+

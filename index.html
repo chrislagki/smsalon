@@ -60,10 +60,10 @@
       </div>
 
       <ul class="drawer-links-list">
-        <li><a href="index.html" class="drawer-link active" data-i18n="nav_home">Αρχική <span>→</span></a></li>
-        <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες <span>→</span></a></li>
-        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί <span>→</span></a></li>
-        <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία <span>→</span></a></li>
+        <li><a href="index.html" class="drawer-link active" data-i18n="nav_home">Αρχική</a></li>
+        <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες</a></li>
+        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί</a></li>
+        <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία</a></li>
       </ul>
     </div>
 
@@ -92,7 +92,7 @@
       </div>
 
       <h3 class="heading-medium" style="margin-bottom: 1rem;" data-i18n="modal_title">Κλείστε το Ραντεβού&nbsp;σας</h3>
-      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.</p>
+      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.<br><br>Κλείσε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σου και δώσε στα μαλλιά σου την προσοχή που τους αξίζουν.</p>
 
       <div style="display: flex; flex-direction: column; gap: 1.2rem;">
         <a href="tel:+302102917238" class="modal-contact-btn modal-phone-btn">
@@ -108,47 +108,26 @@
     </div>
   </div>
 
-  <!-- Hero Section & Slider -->
+  <!-- Hero Section & Looping Video Background -->
   <section class="hero-slider-section">
     <div class="hero-backgrounds">
-      <div class="hero-slide active">
-        <img src="https://cdn.prod.website-files.com/6a7ed896c876854402c4469f/6a7ed899c876854402c44957_pexels-pixabay-458381%20(1).avif" alt="Hair styling model" class="hero-slide-img">
-      </div>
-      <div class="hero-slide">
-        <img src="https://cdn.prod.website-files.com/6a7ed896c876854402c4469f/6a7ed899c876854402c4495d_pexels-justebuka-14626783.avif" alt="Balayage hair studio" class="hero-slide-img">
-      </div>
-      <div class="hero-slide">
-        <img src="https://cdn.prod.website-files.com/6a7ed899c876854402c44733/6a7ed899c876854402c44937_pexels-thejeremiahxo-16805589.avif" alt="Hair sculpting" class="hero-slide-img">
-      </div>
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="images/hero video.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay"></div>
     </div>
 
     <div class="container hero-content">
       <div class="eyebrow">
-        <div class="eyebrow-line"></div>
-        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
         <p class="eyebrow-title" data-i18n="hero_welcome">Καλώς Ήρθατε στο S&M Hair Salon</p>
-        <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
-        <div class="eyebrow-line"></div>
       </div>
 
-      <h1 class="heading-hero" data-i18n="hero_title">Πάθος για Στυλ, Τέχνη στα Μαλλιά</h1>
-      <p class="hero-subtitle-text" data-i18n="hero_subtitle">Στο S&M Hair Salon προσφέρουμε εξειδικευμένες υπηρεσίες κομμωτικής, βαφών, balayage, θεραπειών Malibu & K18, τοποθέτησης extensions και περιποίησης.</p>
+      <h1 class="heading-hero" data-i18n="hero_title">Το ωραίο χρώμα θέλει υγιή μαλλιά.</h1>
+      <p class="hero-subtitle-text" data-i18n="hero_subtitle">Βαφές, balayage και θεραπείες που δυναμώνουν την τρίχα. Για αποτέλεσμα που φαίνεται όμορφο πολύ μετά το ραντεβού σας.</p>
 
       <div class="hero-actions">
-        <a href="services.html" class="btn btn-green" data-i18n="hero_btn_explore">Ανακαλύψτε τις Υπηρεσίες ↓</a>
-        <button class="btn btn-outline btn-open-booking" data-i18n="hero_btn_book">Κλείστε Ραντεβού →</button>
-      </div>
-    </div>
-
-    <div class="slider-timeline-wrapper">
-      <div class="timeline-track">
-        <div class="timeline-progress"></div>
-      </div>
-      <div class="slide-indicators">
-        <button class="indicator-dot active" aria-label="Slide 1"></button>
-        <button class="indicator-dot" aria-label="Slide 2"></button>
-        <button class="indicator-dot" aria-label="Slide 3"></button>
+        <a href="services.html" class="btn btn-green" data-i18n="hero_btn_explore">Ανακαλύψτε τις Υπηρεσίες</a>
+        <button class="btn btn-outline btn-open-booking" data-i18n="hero_btn_book">Κλείστε Ραντεβού</button>
       </div>
     </div>
   </section>
@@ -195,7 +174,7 @@
           </div>
           <h2 class="heading-large" data-i18n="feat_heading">Κουρέματα, Βαφές, Balayage & Εξειδικευμένες Θεραπείες.</h2>
         </div>
-        <a href="services.html" class="btn btn-outline mob-hidden" data-i18n="feat_view_all">Δείτε Όλες τις Υπηρεσίες →</a>
+        <a href="services.html" class="btn btn-outline mob-hidden" style="white-space: nowrap; font-size: 0.82rem; padding: 0.5rem 1.1rem; flex-shrink: 0;" data-i18n="feat_view_all">Δείτε Όλες τις Υπηρεσίες</a>
       </div>
 
       <div class="services-grid">
@@ -293,7 +272,7 @@
         </div>
 
         <div>
-          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες Καταστήματος</h4>
+          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες</h4>
           <ul class="footer-links">
             <li>
               <a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer">
@@ -313,10 +292,54 @@
                 <span>Instagram</span>
               </a>
             </li>
-            <li>
-              <span style="color: var(--color-text-muted);" data-i18n="footer_hours_val">Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά</span>
-            </li>
           </ul>
+        </div>
+
+        <div>
+          <div data-i18n="footer_hours_val">
+            <div class="hours-card-container footer-hours-compact">
+              <div class="hours-day-row" data-day="1">
+                <span class="hours-day-name">Δευτέρα</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+              <div class="hours-day-row" data-day="2">
+                <span class="hours-day-name">Τρίτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="3">
+                <span class="hours-day-name">Τετάρτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 15:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="4">
+                <span class="hours-day-name">Πέμπτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="5">
+                <span class="hours-day-name">Παρασκευή</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="6">
+                <span class="hours-day-name">Σάββατο</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 17:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="0">
+                <span class="hours-day-name">Κυριακή</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

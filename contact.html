@@ -59,10 +59,10 @@
       </div>
 
       <ul class="drawer-links-list">
-        <li><a href="index.html" class="drawer-link" data-i18n="nav_home">Αρχική <span>→</span></a></li>
-        <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες <span>→</span></a></li>
-        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί <span>→</span></a></li>
-        <li><a href="contact.html" class="drawer-link active" data-i18n="nav_contact">Επικοινωνία <span>→</span></a></li>
+        <li><a href="index.html" class="drawer-link" data-i18n="nav_home">Αρχική</a></li>
+        <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες</a></li>
+        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί</a></li>
+        <li><a href="contact.html" class="drawer-link active" data-i18n="nav_contact">Επικοινωνία</a></li>
       </ul>
     </div>
 
@@ -160,20 +160,6 @@
             </div>
           </div>
 
-          <!-- Hours Item -->
-          <div style="display: flex; gap: 1.4rem; align-items: flex-start; padding: 1.8rem; background: linear-gradient(135deg, var(--pastel-blended-start) 10%, var(--pastel-blended-mid) 55%, var(--pastel-blended-end) 100%); border-radius: var(--radius-md); border: 1.5px solid rgba(243, 159, 169, 0.35); box-shadow: var(--shadow-subtle);">
-            <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #ffffff; border: 1px solid var(--color-palette-pink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-palette-berry);">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div>
-              <h4 class="footer-title" style="font-size: 1.15rem; margin-bottom: 0.3rem;" data-i18n="contact_hours_label">Ωράριο</h4>
-              <p style="font-size: 1.05rem; font-weight: 700; color: var(--color-text-main);" data-i18n="footer_hours_val">Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά</p>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -194,7 +180,7 @@
       </div>
 
       <h3 class="heading-medium" style="margin-bottom: 1rem;" data-i18n="modal_title">Κλείστε το Ραντεβού&nbsp;σας</h3>
-      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.</p>
+      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.<br><br>Κλείσε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σου και δώσε στα μαλλιά σου την προσοχή που τους αξίζουν.</p>
 
       <div style="display: flex; flex-direction: column; gap: 1.2rem;">
         <a href="tel:+302102917238" class="modal-contact-btn modal-phone-btn">
@@ -232,7 +218,7 @@
         </div>
 
         <div>
-          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες Καταστήματος</h4>
+          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες</h4>
           <ul class="footer-links">
             <li>
               <a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer">
@@ -252,10 +238,54 @@
                 <span>Instagram</span>
               </a>
             </li>
-            <li>
-              <span style="color: var(--color-text-muted);" data-i18n="footer_hours_val">Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά</span>
-            </li>
           </ul>
+        </div>
+
+        <div>
+          <div data-i18n="footer_hours_val">
+            <div class="hours-card-container footer-hours-compact">
+              <div class="hours-day-row" data-day="1">
+                <span class="hours-day-name">Δευτέρα</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+              <div class="hours-day-row" data-day="2">
+                <span class="hours-day-name">Τρίτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="3">
+                <span class="hours-day-name">Τετάρτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 15:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="4">
+                <span class="hours-day-name">Πέμπτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="5">
+                <span class="hours-day-name">Παρασκευή</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="6">
+                <span class="hours-day-name">Σάββατο</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 17:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="0">
+                <span class="hours-day-name">Κυριακή</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

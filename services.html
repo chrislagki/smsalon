@@ -59,10 +59,10 @@
       </div>
 
       <ul class="drawer-links-list">
-        <li><a href="index.html" class="drawer-link" data-i18n="nav_home">Αρχική <span>→</span></a></li>
-        <li><a href="services.html" class="drawer-link active" data-i18n="nav_services">Υπηρεσίες <span>→</span></a></li>
-        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί <span>→</span></a></li>
-        <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία <span>→</span></a></li>
+        <li><a href="index.html" class="drawer-link" data-i18n="nav_home">Αρχική</a></li>
+        <li><a href="services.html" class="drawer-link active" data-i18n="nav_services">Υπηρεσίες</a></li>
+        <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί</a></li>
+        <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία</a></li>
       </ul>
     </div>
 
@@ -91,12 +91,19 @@
       <p style="color: var(--color-text-muted); max-width: 650px; margin: 0 auto 1.8rem;" data-i18n="services_menu_subtitle">Ανακαλύψτε τις εξειδικευμένες υπηρεσίες κουρέματος, βαφών, balayage, θεραπειών Malibu, K18 & Κερατίνης καθώς και τοποθέτησης extensions.</p>
 
       <!-- Category Filter Tabs -->
-      <div style="display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
+      <div style="display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap;">
         <button class="btn btn-outline filter-tab-btn active" data-filter="all" data-i18n="services_all">Όλες οι Υπηρεσίες</button>
-        <button class="btn btn-outline filter-tab-btn" data-filter="cuts" data-i18n="services_hair_cuts">Κουρέματα & Styling</button>
-        <button class="btn btn-outline filter-tab-btn" data-filter="color" data-i18n="services_hair_color">Βαφές & Balayage</button>
-        <button class="btn btn-outline filter-tab-btn" data-filter="therapy" data-i18n="services_hair_therapy">Θεραπείες Μαλλιών</button>
-        <button class="btn btn-outline filter-tab-btn" data-filter="extensions" data-i18n="services_hair_ext">Extensions & Αποτρίχωση</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="cuts" data-i18n="services_cuts">Κουρέματα & Styling</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="color" data-i18n="services_color">Χρώμα</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="balayage" data-i18n="services_balayage">Balayage & Τεχνικές</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="extensions" data-i18n="services_extensions">Extensions</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="therapy" data-i18n="services_therapy">Θεραπείες Μαλλιών</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="care" data-i18n="services_care">Περιποίηση & Λούσιμο</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="bridal" data-i18n="services_bridal">Bridal & Events</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="men" data-i18n="services_men">Ανδρικά</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="kids" data-i18n="services_kids">Παιδικά</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="products" data-i18n="services_products">Προϊόντα</button>
+        <button class="btn btn-outline filter-tab-btn" data-filter="consultation" data-i18n="services_consultation">Consultation</button>
       </div>
     </div>
   </section>
@@ -106,234 +113,893 @@
     <div class="container">
       <div class="services-grid" style="margin-top: 0;">
         
-        <!-- SECTION 1: Κουρέματα & Styling -->
-        <!-- Service 1: Κούρεμα -->
+        <!-- CATEGORY 1: Κουρέματα & Styling -->
         <div class="service-card" data-category="cuts">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
-            <h3 class="service-card-title" data-i18n="srv_cut">Κούρεμα</h3>
-            <p class="service-card-desc" data-i18n="srv_cut_desc">Προσωποποιημένο κούρεμα ακριβείας προσαρμοσμένο στα χαρακτηριστικά και το στυλ σας.</p>
+            <h3 class="service-card-title" data-i18n="srv_women_cut">Γυναικείο Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_women_cut_desc">Προσωποποιημένο γυναικείο κούρεμα ακριβείας προσαρμοσμένο στα χαρακτηριστικά και το στυλ σας.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 2: Χτένισμα -->
+        <div class="service-card" data-category="cuts">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_kids_cut_cuts">Παιδικό Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_kids_cut_cuts_desc">Φροντισμένο και περιποιημένο κούρεμα για παιδιά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="cuts">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_men_cut_cuts">Ανδρικό Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_men_cut_cuts_desc">Σύγχρονο ανδρικό κούρεμα ακριβείας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
         <div class="service-card" data-category="cuts">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
             <h3 class="service-card-title" data-i18n="srv_styling">Χτένισμα</h3>
             <p class="service-card-desc" data-i18n="srv_styling_desc">Επαγγελματικό χτένισμα για εντυπωσιακές εμφανίσεις και διάρκεια.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 3: Φορμάρισμα -->
         <div class="service-card" data-category="cuts">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
-            <h3 class="service-card-title" data-i18n="srv_shaping">Φορμάρισμα</h3>
-            <p class="service-card-desc" data-i18n="srv_shaping_desc">Ελαφρύ φορμάρισμα και styling για φυσικό όγκο και κίνηση.</p>
+            <h3 class="service-card-title" data-i18n="srv_straightening">Ίσιωμα</h3>
+            <p class="service-card-desc" data-i18n="srv_straightening_desc">Λείο ίσιωμα για μεταξένιο και λαμπερό αποτέλεσμα.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- SECTION 2: Βαφές & Balayage -->
-        <!-- Service 4: Βαφή -->
-        <div class="service-card" data-category="color">
+        <div class="service-card" data-category="cuts">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Βαφές & Balayage</p></div>
-            <h3 class="service-card-title" data-i18n="srv_color">Βαφή</h3>
-            <p class="service-card-desc" data-i18n="srv_color_desc">Βαφή υψηλής ποιότητας για πλούσιο, λαμπερό χρώμα και πλήρη κάλυψη.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_curls">Μπούκλες / Σπαστό</h3>
+            <p class="service-card-desc" data-i18n="srv_curls_desc">Styling με ανάλαφρες μπούκλες ή φυσική σπαστή κίνηση.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 5: Ανταύγειες -->
-        <div class="service-card" data-category="color">
+        <div class="service-card" data-category="cuts">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Βαφές & Balayage</p></div>
-            <h3 class="service-card-title" data-i18n="srv_highlights">Ανταύγειες</h3>
-            <p class="service-card-desc" data-i18n="srv_highlights_desc">Τεχνική φωτεινών ανταυγειών για βάθος, διάσταση και λάμψη στα μαλλιά σας.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_event_styling">Χτένισμα για Ειδική Περίσταση</h3>
+            <p class="service-card-desc" data-i18n="srv_event_styling_desc">Εντυπωσιακό χτένισμα για δεξιώσεις και ιδιαίτερες στιγμές.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 6: Balayage -->
+        <div class="service-card" data-category="cuts">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bridal_styling">Βραδινό / Νυφικό Χτένισμα</h3>
+            <p class="service-card-desc" data-i18n="srv_bridal_styling_desc">Πολυτελές βραδινό ή νυφικό styling.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="cuts">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bridal_trial">Δοκιμαστικό Νυφικό Χτένισμα</h3>
+            <p class="service-card-desc" data-i18n="srv_bridal_trial_desc">Δοκιμαστική συνεδρία για την τέλεια επιλογή νυφικού χτενίσματος.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: Χρώμα -->
         <div class="service-card" data-category="color">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Βαφές & Balayage</p></div>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_root_color">Βαφή Ρίζας</h3>
+            <p class="service-card-desc" data-i18n="srv_root_color_desc">Ανανέωση βαφής στη ρίζα για πλήρη κάλυψη.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_full_color">Βαφή σε Όλα τα Μήκη</h3>
+            <p class="service-card-desc" data-i18n="srv_full_color_desc">Ολική βαφή από τη ρίζα έως τις άκρες για πλούσιο, λαμπερό χρώμα.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_refle">Ρεφλέ</h3>
+            <p class="service-card-desc" data-i18n="srv_refle_desc">Φρεσκάρισμα τόνου και εξουδετέρωση ανεπιθύμητων κιτρινιλών.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_toner_gloss">Toner / Gloss</h3>
+            <p class="service-card-desc" data-i18n="srv_toner_gloss_desc">Χρωματικό toner & λάμψη για ζωντάνια.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_color_correction">Διόρθωση Χρώματος</h3>
+            <p class="service-card-desc" data-i18n="srv_color_correction_desc">Εξειδικευμένη διόρθωση τόνων και αλλαγή χρώματος.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bleach_full">Ντεκαπάζ</h3>
+            <p class="service-card-desc" data-i18n="srv_bleach_full_desc">Ολικό ξάνθισμα υψηλής προστασίας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bleach_root">Ντεκαπάζ Ρίζας</h3>
+            <p class="service-card-desc" data-i18n="srv_bleach_root_desc">Στοχευμένο ξάνθισμα στη ρίζα με φροντίδα της τρίχας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="color">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Χρώμα</p></div>
+            <h3 class="service-card-title" data-i18n="srv_color_removal">Αποχρωματισμός</h3>
+            <p class="service-card-desc" data-i18n="srv_color_removal_desc">Ασφαλής αφαίρεση προηγούμενων χρωστικών.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: Balayage & Τεχνικές Ξανοίγματος -->
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
             <h3 class="service-card-title" data-i18n="srv_balayage">Balayage</h3>
-            <p class="service-card-desc" data-i18n="srv_balayage_desc">Signature balayage για φυσικές, ομαλές μεταβάσεις χρώματος και ηλιόλουστο αποτέλεσμα.</p>
+            <p class="service-card-desc" data-i18n="srv_balayage_desc">Signature hand-painted balayage για φυσικές, ομαλές μεταβάσεις χρώματος.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- SECTION 3: Θεραπείες Μαλλιών -->
-        <!-- Service 7: Απλή Ενυδάτωση -->
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_babylights">Babylights</h3>
+            <p class="service-card-desc" data-i18n="srv_babylights_desc">Πολύ λεπτές, διακριτικές ανταύγειες για φυσική φωτεινότητα.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_highlights">Highlights</h3>
+            <p class="service-card-desc" data-i18n="srv_highlights_desc">Κλασικές ανταύγειες με αλουμινόχαρτο για βάθος και λάμψη.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_lowlights">Lowlights</h3>
+            <p class="service-card-desc" data-i18n="srv_lowlights_desc">Σκούρες πινελιές για βάθος και φυσικότητα.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_face_framing">Face Framing</h3>
+            <p class="service-card-desc" data-i18n="srv_face_framing_desc">Φωτεινές ανταύγειες γύρω από το πρόσωπο που αναδεικνύουν τα χαρακτηριστικά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_money_piece">Money Piece</h3>
+            <p class="service-card-desc" data-i18n="srv_money_piece_desc">Έντονο φωτεινό πλαίσιο στις μπροστινές τούφες.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_antavgeies">Ανταύγειες</h3>
+            <p class="service-card-desc" data-i18n="srv_antavgeies_desc">Τεχνική ανταυγειών προσαρμοσμένη στις ανάγκες σας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_combo_lightening">Συνδυαστικές Τεχνικές Ξανοίγματος</h3>
+            <p class="service-card-desc" data-i18n="srv_combo_lightening_desc">Custom συνδυασμός Balayage, Babylights & Highlights.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="balayage">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_balayage_title">Balayage & Τεχνικές Ξανοίγματος</p></div>
+            <h3 class="service-card-title" data-i18n="srv_balayage_correction">Διόρθωση Balayage / Ανταυγειών</h3>
+            <p class="service-card-desc" data-i18n="srv_balayage_correction_desc">Επαγγελματική διόρθωση και εξομάλυνση μεταβάσεων balayage.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: Extensions -->
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_tape_extensions">Ταινίες Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_tape_extensions_desc">Τοποθέτηση extensions με ταινίες (tape-in) για φυσικό μήκος & όγκο.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_invisible_tapes">Invisible Tape Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_invisible_tapes_desc">Αόρατες ταινίες tape extensions για διακριτικότητα και άνεση.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_length">Extensions για Μήκος</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_length_desc">Προσθήκη extensions premium ποιότητας για μακριά μαλλιά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_volume">Extensions για Όγκο</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_volume_desc">Πύκνωση και ενίσχυση όγκου σε λεπτά μαλλιά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_placement">Τοποθέτηση Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_placement_desc">Εξειδικευμένη εφαρμογή extensions με ακρίβεια.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_removal">Αφαίρεση Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_removal_desc">Ανώδυνη και προσεκτική αφαίρεση extensions χωρίς φθορά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_refitting">Επανατοποθέτηση / Συντήρηση Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_refitting_desc">Περιοδική συντήρηση, αντικατάσταση ταινιών και επανατοποθέτηση.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="extensions">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_ext_consultation">Συμβουλευτική Extensions & Χρώματος</h3>
+            <p class="service-card-desc" data-i18n="srv_ext_consultation_desc">Προσωπική συνεδρία για την επιλογή μεθόδου & απόχρωσης.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 5: Θεραπείες Μαλλιών -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_hydration">Απλή Ενυδάτωση</h3>
-            <p class="service-card-desc" data-i18n="srv_hydration_desc">Βασική θεραπεία βαθιάς ενυδάτωσης για απαλότητα και ελαστικότητα.</p>
+            <h3 class="service-card-title" data-i18n="srv_k18">K18 Molecular Repair</h3>
+            <p class="service-card-desc" data-i18n="srv_k18_desc">Επαναστατική μοριακή θεραπεία K18 που επανορθώνει την τρίχη σε 4 λεπτά.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 8: Malibu λουτήρα -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_malibu_wash">Malibu Λουτήρα</h3>
-            <p class="service-card-desc" data-i18n="srv_malibu_wash_desc">Εξειδικευμένος καθαρισμός Malibu στον λουτήρα για αφαίρεση επικαθίσεων.</p>
+            <h3 class="service-card-title" data-i18n="srv_olaplex">Olaplex</h3>
+            <p class="service-card-desc" data-i18n="srv_olaplex_desc">Παγκοσμίως αναγνωρισμένη θεραπεία προστασίας και αναδόμησης δεσμών.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 9: Malibu Crystal -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_malibu_crystal">Malibu Crystal</h3>
-            <p class="service-card-desc" data-i18n="srv_malibu_crystal_desc">Θεραπεία κρυσταλλικού καθαρισμού Malibu για απομάκρυνση σκληρών μετάλλων & αλάτων.</p>
+            <h3 class="service-card-title" data-i18n="srv_malibu_cocktail">Cocktail Malibu C</h3>
+            <p class="service-card-desc" data-i18n="srv_malibu_cocktail_desc">Συνδυαστική θεραπεία Malibu C για βαθύ καθαρισμό και αναζωογόνηση.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 10: Malibu CPR -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_malibu_cpr">Malibu CPR</h3>
-            <p class="service-card-desc" data-i18n="srv_malibu_cpr_desc">Επαγγελματική θεραπεία Malibu CPR για αφαίρεση ανεπιθύμητων τεχνητών χρωστικών.</p>
+            <h3 class="service-card-title" data-i18n="srv_malibu_crystal">Crystal Gel Malibu C</h3>
+            <p class="service-card-desc" data-i18n="srv_malibu_crystal_desc">Αφαιρεί σκληρά μέταλλα, άλατα και χλώριο που θαμπώνουν τα μαλλιά.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 11: Malibu HEADLAB -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_malibu_headlab">Malibu HEADLAB</h3>
-            <p class="service-card-desc" data-i18n="srv_malibu_headlab_desc">Προηγμένη διάγνωση & θεραπεία εξυγίανσης τριχωτού και μαλλιών Malibu HEADLAB.</p>
+            <h3 class="service-card-title" data-i18n="srv_malibu_cpr">CPR Malibu C</h3>
+            <p class="service-card-desc" data-i18n="srv_malibu_cpr_desc">Αφαιρεί με ασφάλεια τις συσσωρευμένες τεχνητές χρωστικές.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 12: Malibu Cocktail -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_malibu_cocktail">Malibu Cocktail</h3>
-            <p class="service-card-desc" data-i18n="srv_malibu_cocktail_desc">Συνδυαστική θεραπεία Malibu Cocktail για απόλυτη αναζωογόνηση και λάμψη.</p>
+            <h3 class="service-card-title" data-i18n="srv_hair_detox">Detox Μαλλιών</h3>
+            <p class="service-card-desc" data-i18n="srv_hair_detox_desc">Θεραπεία αποτοξίνωσης για απομάκρυνση ρύπων και επικαθίσεων.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 13: Botox Μαλλιών -->
-        <div class="service-card" data-category="therapy">
-          <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_botox">Botox Μαλλιών</h3>
-            <p class="service-card-desc" data-i18n="srv_botox_desc">Εντατική θεραπεία αναδόμησης & θρέψης που γεμίζει την τρίχα και χαρίζει μεταξένια υφή.</p>
-            <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service 14: Θεραπεία Κερατίνης -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
             <h3 class="service-card-title" data-i18n="srv_keratin">Θεραπεία Κερατίνης</h3>
-            <p class="service-card-desc" data-i18n="srv_keratin_desc">Επαγγελματική ισιωτική θεραπεία λείανσης κερατίνης κατά του φριζαρίσματος.</p>
+            <p class="service-card-desc" data-i18n="srv_keratin_desc">Επαγγελματική λείανση κερατίνης κατά του φριζαρίσματος με διάρκεια.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 15: K18 -->
         <div class="service-card" data-category="therapy">
           <div class="service-card-body">
             <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-            <h3 class="service-card-title" data-i18n="srv_k18">Θεραπεία K18</h3>
-            <p class="service-card-desc" data-i18n="srv_k18_desc">Επαναστατική μοριακή θεραπεία K18 για επανόρθωση της τρίχης σε 4 λεπτά.</p>
+            <h3 class="service-card-title" data-i18n="srv_hydration">Ενυδάτωση</h3>
+            <p class="service-card-desc" data-i18n="srv_hydration_desc">Βαθιά ενυδατική φροντίδα για ελαστικότητα, απαλότητα και λάμψη.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- SECTION 4: Extensions & Αποτρίχωση -->
-        <!-- Service 16: Τοποθέτηση tapes -->
-        <div class="service-card" data-category="extensions">
+        <div class="service-card" data-category="therapy">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions & Αποτρίχωση</p></div>
-            <h3 class="service-card-title" data-i18n="srv_tapes">Τοποθέτηση Tapes</h3>
-            <p class="service-card-desc" data-i18n="srv_tapes_desc">Εξειδικευμένη τοποθέτηση τρέσας/tapes extensions για φυσικό μήκος και όγκο.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
+            <h3 class="service-card-title" data-i18n="srv_reconstruction">Αναδόμηση</h3>
+            <p class="service-card-desc" data-i18n="srv_reconstruction_desc">Εντατική θεραπεία πρωτεϊνικής αναδόμησης για ταλαιπωρημένα μαλλιά.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 17: Τοποθέτηση microrings -->
-        <div class="service-card" data-category="extensions">
+        <div class="service-card" data-category="therapy">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions & Αποτρίχωση</p></div>
-            <h3 class="service-card-title" data-i18n="srv_microrings">Τοποθέτηση Microrings</h3>
-            <p class="service-card-desc" data-i18n="srv_microrings_desc">Τοποθέτηση extensions με τη μέθοδο microrings χωρίς θερμότητα.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
+            <h3 class="service-card-title" data-i18n="srv_damaged_therapy">Θεραπεία για Ταλαιπωρημένα Μαλλιά</h3>
+            <p class="service-card-desc" data-i18n="srv_damaged_therapy_desc">Εξειδικευμένο πρωτόκολλο επανόρθωσης για καταστρεμμένα μαλλιά.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 18: Επανατοποθέτηση -->
-        <div class="service-card" data-category="extensions">
+        <div class="service-card" data-category="therapy">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions & Αποτρίχωση</p></div>
-            <h3 class="service-card-title" data-i18n="srv_refitting">Επανατοποθέτηση Extensions</h3>
-            <p class="service-card-desc" data-i18n="srv_refitting_desc">Συντήρηση και επανατοποθέτηση extensions tapes ή microrings.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
+            <h3 class="service-card-title" data-i18n="srv_split_ends">Θεραπεία κατά της Ψαλίδας</h3>
+            <p class="service-card-desc" data-i18n="srv_split_ends_desc">Σφράγιση των αιχμών της τρίχας για πρόληψη της ψαλίδας.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
 
-        <!-- Service 19: Αποτρίχωση -->
-        <div class="service-card" data-category="extensions">
+        <div class="service-card" data-category="therapy">
           <div class="service-card-body">
-            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions & Αποτρίχωση</p></div>
-            <h3 class="service-card-title" data-i18n="srv_waxing">Αποτρίχωση</h3>
-            <p class="service-card-desc" data-i18n="srv_waxing_desc">Περιποίηση και αποτρίχωση προσώπου με προσοχή και υγιεινή.</p>
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
+            <h3 class="service-card-title" data-i18n="srv_custom_therapy">Εξατομικευμένη Θεραπεία</h3>
+            <p class="service-card-desc" data-i18n="srv_custom_therapy_desc">Custom θεραπεία σχεδιασμένη αποκλειστικά για τις ανάγκες της τρίχας σας.</p>
             <div class="service-card-footer">
-              <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 6: Περιποίηση & Λούσιμο -->
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_wash">Λούσιμο</h3>
+            <p class="service-card-desc" data-i18n="srv_wash_desc">Χαλαρωτικό λούσιμο με εξειδικευμένα επαγγελματικά σαμπουάν.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_conditioner_mask">Conditioner / Μάσκα</h3>
+            <p class="service-card-desc" data-i18n="srv_conditioner_mask_desc">Εντατική μαλακτική φροντίδα & μάσκα για μεταξένια υφή.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_scalp_care">Εξειδικευμένη Περιποίηση Τριχωτού</h3>
+            <p class="service-card-desc" data-i18n="srv_scalp_care_desc">Στοχευμένη φροντίδα για ευαίσθητο, ξηρό ή λιπαρό τριχωτό.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_scalp_treatment">Scalp Treatment</h3>
+            <p class="service-card-desc" data-i18n="srv_scalp_treatment_desc">Θεραπεία τριχωτού κεφαλής για υγιή ανάπτυξη της τρίχας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_scalp_detox">Detox Τριχωτού</h3>
+            <p class="service-card-desc" data-i18n="srv_scalp_detox_desc">Βαθύς απολεπιστικός καθαρισμός τριχωτού από σμήγμα.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_rejuvenation">Θεραπεία Αναζωογόνησης</h3>
+            <p class="service-card-desc" data-i18n="srv_rejuvenation_desc">Τονωτική φροντίδα που ζωντανεύει τα θαμπά και άτονα μαλλιά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="care">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_care_title">Περιποίηση & Λούσιμο</p></div>
+            <h3 class="service-card-title" data-i18n="srv_strengthening">Θεραπεία Ενδυνάμωσης</h3>
+            <p class="service-card-desc" data-i18n="srv_strengthening_desc">Ενίσχυση της ρίζας και της δομής της τρίχας κατά του σπασίματος.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 7: Bridal & Special Occasions -->
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bridal_main">Νυφικό Χτένισμα</h3>
+            <p class="service-card-desc" data-i18n="srv_bridal_main_desc">Πολυτελές νυφικό styling προσαρμοσμένο στο νυφικό και το ύφος του γάμου.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bridal_styling_opt">Bridal Styling</h3>
+            <p class="service-card-desc" data-i18n="srv_bridal_styling_opt_desc">Ολοκληρωμένη περιποίηση και φορμάρισμα για τη μέρα του γάμου.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_bridal_trial_opt">Δοκιμαστικό Νυφικό Χτένισμα</h3>
+            <p class="service-card-desc" data-i18n="srv_bridal_trial_opt_desc">Δοκιμαστικές προτάσεις & εφαρμογές για την οριστικοποίηση του νυφικού look.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_wedding_guest">Χτένισμα για Γάμο</h3>
+            <p class="service-card-desc" data-i18n="srv_wedding_guest_desc">Κομψά χτενίσματα για κουμπάρες, μαμάδες και καλεσμένες γάμου.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_baptism_styling">Χτένισμα για Βάπτιση</h3>
+            <p class="service-card-desc" data-i18n="srv_baptism_styling_desc">Φρέσκα και κομψά χτενίσματα για μαμάδες & νονές σε βαπτίσεις.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_events_styling">Χτένισμα για Εκδηλώσεις</h3>
+            <p class="service-card-desc" data-i18n="srv_events_styling_desc">Επαγγελματικό styling για gala, δεξιώσεις και επίσημες εκδηλώσεις.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="bridal">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_bridal_title">Bridal & Special Occasions</p></div>
+            <h3 class="service-card-title" data-i18n="srv_party_styling">Χτένισμα για Πάρτι / Special Occasions</h3>
+            <p class="service-card-desc" data-i18n="srv_party_styling_desc">Μοντέρνα χτενίσματα για γενέθλια, ρεβεγιόν και πάρτι.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 8: Ανδρικές Υπηρεσίες -->
+        <div class="service-card" data-category="men">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_men_title">Ανδρικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_men_cut">Ανδρικό Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_men_cut_desc">Σύγχρονο ή κλασικό ανδρικό κούρεμα ακριβείας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="men">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_men_title">Ανδρικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_clippers_cut">Κούρεμα με Μηχανή</h3>
+            <p class="service-card-desc" data-i18n="srv_clippers_cut_desc">Κούρεμα με μηχανή (fade / buzz cut) με καθαρές γραμμές.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="men">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_men_title">Ανδρικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_razor_cut">Κούρεμα με Ξυράφι</h3>
+            <p class="service-card-desc" data-i18n="srv_razor_cut_desc">Παραδοσιακό κούρεμα & φινίρισμα με ξυράφι για απόλυτη ακρίβεια.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="men">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_men_title">Ανδρικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_beard_trim">Περιποίηση Γενειάδας</h3>
+            <p class="service-card-desc" data-i18n="srv_beard_trim_desc">Σχηματισμός και περιποίηση γενειάδας & μουστακιού.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="men">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_men_title">Ανδρικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_men_styling">Styling</h3>
+            <p class="service-card-desc" data-i18n="srv_men_styling_desc">Φινίρισμα και φορμάρισμα με επαγγελματικά προϊόντα styling.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 9: Παιδικές Υπηρεσίες -->
+        <div class="service-card" data-category="kids">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_kids_title">Παιδικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_kids_styling">Παιδικό Χτένισμα</h3>
+            <p class="service-card-desc" data-i18n="srv_kids_styling_desc">Όμορφα, ανάλαφρα χτενίσματα για παιδιά.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="kids">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_kids_title">Παιδικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_girls_cut">Κοριτσίστικο Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_girls_cut_desc">Μοντέρνο κούρεμα και φορμάρισμα για μικρές δεσποινίδες.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="kids">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_kids_title">Παιδικές Υπηρεσίες</p></div>
+            <h3 class="service-card-title" data-i18n="srv_boys_cut">Αγορίστικο Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_boys_cut_desc">Στυλάτο αγορίστικο κούρεμα με προσοχή στη λεπτομέρεια.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 10: Προϊόντα & Συμβουλευτική -->
+        <div class="service-card" data-category="products">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_products_title">Προϊόντα & Συμβουλευτική</p></div>
+            <h3 class="service-card-title" data-i18n="srv_product_advice">Συμβουλευτική Επιλογής Προϊόντων</h3>
+            <p class="service-card-desc" data-i18n="srv_product_advice_desc">Επαγγελματική καθοδήγηση για τη σωστή επιλογή προϊόντων στο σπίτι.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="products">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_products_title">Προϊόντα & Συμβουλευτική</p></div>
+            <h3 class="service-card-title" data-i18n="srv_custom_care_routine">Προτάσεις Εξατομικευμένης Περιποίησης</h3>
+            <p class="service-card-desc" data-i18n="srv_custom_care_routine_desc">Σχεδιασμός ρουτίνας περιποίησης προσαρμοσμένης στα μαλλιά σας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="products">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_products_title">Προϊόντα & Συμβουλευτική</p></div>
+            <h3 class="service-card-title" data-i18n="srv_color_products">Προτάσεις Προϊόντων για Βαμμένα Μαλλιά</h3>
+            <p class="service-card-desc" data-i18n="srv_color_products_desc">Εξειδικευμένα προϊόντα διατήρησης & προστασίας του χρώματος.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="products">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_products_title">Προϊόντα & Συμβουλευτική</p></div>
+            <h3 class="service-card-title" data-i18n="srv_extensions_products">Προτάσεις Προϊόντων για Extensions</h3>
+            <p class="service-card-desc" data-i18n="srv_extensions_products_desc">Ειδικά προϊόντα καθαρισμού & ενυδάτωσης για extensions.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="products">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_products_title">Προϊόντα & Συμβουλευτική</p></div>
+            <h3 class="service-card-title" data-i18n="srv_pro_products">Προϊόντα Επαγγελματικής Περιποίησης</h3>
+            <p class="service-card-desc" data-i18n="srv_pro_products_desc">Κορυφαία επαγγελματικά προϊόντα κομμωτηρίου για θεραπεία & styling.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 11: Consultation -->
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_free_consultation">Δωρεάν Συμβουλευτική</h3>
+            <p class="service-card-desc" data-i18n="srv_free_consultation_desc">Δωρεάν προσωπική συνεδρία αξιολόγησης πριν από κάθε εργασία.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_hair_diagnosis">Hair Diagnosis</h3>
+            <p class="service-card-desc" data-i18n="srv_hair_diagnosis_desc">Επαγγελματική διάγνωση της ποιότητας και της υγείας της τρίχας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_hair_analysis">Ανάλυση Κατάστασης Τρίχας</h3>
+            <p class="service-card-desc" data-i18n="srv_hair_analysis_desc">Λεπτομερής έλεγχος των αναγκών σε ενυδάτωση και πρωτεΐνη.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_color_proposal">Πρόταση Χρώματος</h3>
+            <p class="service-card-desc" data-i18n="srv_color_proposal_desc">Προσωποποιημένη πρόταση απόχρωσης με βάση τον τόνο της επιδερμίδας σας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_balayage_proposal">Πρόταση Τεχνικής Balayage</h3>
+            <p class="service-card-desc" data-i18n="srv_balayage_proposal_desc">Επιλογή της ιδανικής τεχνικής ξανοίγματος.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_cut_consultation">Συμβουλευτική πριν από Κούρεμα</h3>
+            <p class="service-card-desc" data-i18n="srv_cut_consultation_desc">Μελέτη σχήματος προσώπου & τύπου μαλλιών.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="consultation">
+          <div class="service-card-body">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_consultation_title">Consultation</p></div>
+            <h3 class="service-card-title" data-i18n="srv_custom_plan">Εξατομικευμένο Πλάνο Περιποίησης</h3>
+            <p class="service-card-desc" data-i18n="srv_custom_plan_desc">Ολοκληρωμένο πλάνο θεραπειών και φροντίδας.</p>
+            <div class="service-card-footer">
+              <button class="btn-circle btn-open-booking" style="margin-left: auto;"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
             </div>
           </div>
         </div>
@@ -356,7 +1022,7 @@
       </div>
 
       <h3 class="heading-medium" style="margin-bottom: 1rem;" data-i18n="modal_title">Κλείστε το Ραντεβού&nbsp;σας</h3>
-      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.</p>
+      <p style="color: var(--color-text-muted); margin-bottom: 2.2rem; line-height: 1.7;" data-i18n="modal_subtitle">Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.<br><br>Κλείσε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σου και δώσε στα μαλλιά σου την προσοχή που τους αξίζουν.</p>
 
       <div style="display: flex; flex-direction: column; gap: 1.2rem;">
         <a href="tel:+302102917238" class="modal-contact-btn modal-phone-btn">
@@ -394,7 +1060,7 @@
         </div>
 
         <div>
-          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες Καταστήματος</h4>
+          <h4 class="footer-title" data-i18n="footer_info_title">Πληροφορίες</h4>
           <ul class="footer-links">
             <li>
               <a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer">
@@ -414,10 +1080,54 @@
                 <span>Instagram</span>
               </a>
             </li>
-            <li>
-              <span style="color: var(--color-text-muted);" data-i18n="footer_hours_val">Δευ - Σαβ: 09:00 - 20:00 • Κυρ: Κλειστά</span>
-            </li>
           </ul>
+        </div>
+
+        <div>
+          <div data-i18n="footer_hours_val">
+            <div class="hours-card-container footer-hours-compact">
+              <div class="hours-day-row" data-day="1">
+                <span class="hours-day-name">Δευτέρα</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+              <div class="hours-day-row" data-day="2">
+                <span class="hours-day-name">Τρίτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="3">
+                <span class="hours-day-name">Τετάρτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 15:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="4">
+                <span class="hours-day-name">Πέμπτη</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 14:00</span>
+                  <span class="time-pill">17:00 - 20:30</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="5">
+                <span class="hours-day-name">Παρασκευή</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="6">
+                <span class="hours-day-name">Σάββατο</span>
+                <div class="hours-time-group">
+                  <span class="time-pill">09:00 - 17:00</span>
+                </div>
+              </div>
+              <div class="hours-day-row" data-day="0">
+                <span class="hours-day-name">Κυριακή</span>
+                <span class="closed-pill">Κλειστά</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
