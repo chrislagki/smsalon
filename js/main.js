@@ -172,6 +172,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+
+    const activeInitialTab = document.querySelector('.filter-tab-btn.active');
+    if (activeInitialTab) {
+      activeInitialTab.click();
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+   * 4b. Real-Time Service Search (services.html)
+   * ------------------------------------------------------------------------ */
+  const searchInput = document.getElementById('service-search-input');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+
+  if (searchInput) {
+    const normalizeString = (str) => {
+      return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    };
+
+    const handleSearch = () => {
+      const rawQuery = searchInput.value.trim();
+      const query = normalizeString(rawQuery);
+
+      if (searchClearBtn) {
+        searchClearBtn.style.display = rawQuery.length > 0 ? 'inline-block' : 'none';
+      }
+
+      if (query.length === 0) {
+        const activeTab = document.querySelector('.filter-tab-btn.active');
+        if (activeTab) {
+          const filterValue = activeTab.getAttribute('data-filter');
+          filterableItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+            item.style.display = (filterValue === 'all' || itemCategory === filterValue) ? 'flex' : 'none';
+          });
+        }
+        return;
+      }
+
+      filterableItems.forEach(item => {
+        const title = normalizeString(item.querySelector('.service-card-title')?.textContent || '');
+        const desc = normalizeString(item.querySelector('.service-card-desc')?.textContent || '');
+        const categoryTitle = normalizeString(item.querySelector('.eyebrow-title')?.textContent || '');
+
+        const matches = title.includes(query) || desc.includes(query) || categoryTitle.includes(query);
+        item.style.display = matches ? 'flex' : 'none';
+      });
+    };
+
+    searchInput.addEventListener('input', handleSearch);
+
+    if (searchClearBtn) {
+      searchClearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        handleSearch();
+        searchInput.focus();
+      });
+    }
+
+    filterTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (searchInput.value !== '') {
+          searchInput.value = '';
+          if (searchClearBtn) searchClearBtn.style.display = 'none';
+        }
+      });
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -442,6 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gallery_title: "Φροντίδα που φαίνεται στην πράξη.",
       gallery_subtitle: "Εξερευνήστε. Εμπνευστείτε.",
       gallery_all: "Όλα",
+      search_placeholder: "Αναζήτηση υπηρεσίας...",
       contact_eyebrow: "Επικοινωνία",
       contact_title: "Επικοινωνήστε Μαζί Μας",
       contact_subtitle: "Βρείτε όλες τις πληροφορίες του καταστήματός μας στο Γαλάτσι και κλείστε το ραντεβού σας τηλεφωνικά ή μέσω Instagram.",
@@ -780,6 +850,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gallery_title: "Care that shows in practice.",
       gallery_subtitle: "Explore. Get Inspired.",
       gallery_all: "All",
+      search_placeholder: "Search for a service...",
       contact_eyebrow: "Contact Us",
       contact_title: "Get in Touch",
       contact_subtitle: "Have questions about our hair services, colors, or treatments? Drop us a message or visit our salon in Galatsi.",
@@ -895,6 +966,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
         el.innerHTML = translations[lang][key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang] && translations[lang][key]) {
+        el.placeholder = translations[lang][key];
       }
     });
 
