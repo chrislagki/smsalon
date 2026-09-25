@@ -276,6 +276,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
+   * 6b. Featured Service Cards Slider Logic (index.html)
+   * ------------------------------------------------------------------------ */
+  const serviceSlides = document.querySelectorAll('.slider-service-card');
+  const sliderDots = document.querySelectorAll('.slider-dot');
+  const prevSlideBtn = document.querySelector('.prev-slide');
+  const nextSlideBtn = document.querySelector('.next-slide');
+
+  if (serviceSlides.length > 0) {
+    let activeSlideIndex = 0;
+
+    const showSlide = (index) => {
+      activeSlideIndex = (index + serviceSlides.length) % serviceSlides.length;
+      serviceSlides.forEach((slide, i) => {
+        if (i === activeSlideIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      sliderDots.forEach((dot, i) => {
+        if (i === activeSlideIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    if (nextSlideBtn) {
+      nextSlideBtn.addEventListener('click', () => {
+        showSlide(activeSlideIndex + 1);
+      });
+    }
+
+    if (prevSlideBtn) {
+      prevSlideBtn.addEventListener('click', () => {
+        showSlide(activeSlideIndex - 1);
+      });
+    }
+
+    sliderDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------------
    * 7. Multilingual Language Switcher (Greek <-> English)
    * ------------------------------------------------------------------------ */
   const langBtns = document.querySelectorAll('.lang-btn');
@@ -288,16 +337,19 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_contact: "Επικοινωνία",
       nav_book: "Κλείστε Ραντεβού",
       hero_welcome: "Καλώς Ήρθατε στο S&M Hair Salon",
-      hero_title: "Το ωραίο χρώμα θέλει υγιή μαλλιά.",
+      hero_title: "Τα μαλλιά σας είναι σε καλά χέρια.",
       hero_subtitle: "Βαφές, balayage και θεραπείες που δυναμώνουν την τρίχα. Για αποτέλεσμα που φαίνεται όμορφο πολύ μετά το ραντεβού σας.",
       hero_btn_explore: "Ανακαλύψτε τις Υπηρεσίες",
       hero_btn_book: "Κλείστε Ραντεβού",
       philo_title: "Φιλοσοφία",
-      philo_heading: "Αναδεικνύουμε τη φυσική ομορφιά των μαλλιών σας.",
-      philo_desc: "Με έμπειρα χέρια, εξειδίκευση σε θεραπείες Malibu, K18 & Κερατίνης και κορυφαία προϊόντα, δημιουργούμε το αποτέλεσμα των ονείρων σας.",
+      philo_heading: "Σε καλά χέρια, εδώ και τρεις γενιές.",
+      philo_desc: "Το S&M είναι οικογενειακή υπόθεση εδώ και 30 χρόνια. Ό,τι ξέρουμε το μάθαμε δίπλα σε αυτούς που ήταν πριν από εμάς, και το εξελίσσουμε κάθε μέρα. Γι' αυτό κάθε πελάτης αντιμετωπίζεται ως δικός μας άνθρωπος.",
       feat_title: "Υπηρεσίες Κομμωτηρίου",
       feat_heading: "Κουρέματα, Βαφές, Balayage & Εξειδικευμένες Θεραπείες.",
       feat_view_all: "Δείτε Όλες τις Υπηρεσίες",
+      feat_subtext_p1: "Δεν υπάρχει μία λύση που ταιριάζει σε όλους. Υπάρχει αυτή που ταιριάζει στα δικά σας μαλλιά.",
+      feat_subtext_p2: "Άλλο πάχος τρίχας, άλλο ιστορικό βαφής, άλλη καθημερινότητα και άλλος χρόνος για styling το πρωί. Γι' αυτό κάθε ραντεβού ξεκινά με μια κουβέντα και μια ματιά στην κατάσταση της τρίχας, πριν αποφασίσουμε τι θα κάνουμε. Μερικές φορές η απάντηση είναι μια αλλαγή χρώματος. Άλλες, μια θεραπεία πρώτα και το χρώμα μετά.",
+      feat_subtext_p3: "Από το κούρεμα και το καθημερινό φρεσκάρισμα, μέχρι το balayage και τις εξειδικευμένες θεραπείες, θα βρείτε όλα όσα κάνουμε στο πλήρες μενού.",
       services_menu_title: "Μενού Υπηρεσιών",
       services_menu_heading: "Υπηρεσίες Κομμωτηρίου",
       services_menu_subtitle: "Ανακαλύψτε τις εξειδικευμένες υπηρεσίες κουρέματος, βαφών, balayage, θεραπειών Malibu, K18 & Κερατίνης καθώς και τοποθέτησης extensions.",
@@ -507,6 +559,8 @@ document.addEventListener('DOMContentLoaded', () => {
       srv_custom_plan: "Εξατομικευμένο Πλάνο Περιποίησης",
       srv_custom_plan_desc: "Ολοκληρωμένο πλάνο θεραπειών και φροντίδας.",
       book_btn: "Κράτηση",
+      services_menu_heading: "Φροντίδα που φαίνεται στην πράξη.",
+      services_menu_subtitle: "Εξερευνήστε. Εμπνευστείτε.",
       gallery_eyebrow: "Portfolio",
       gallery_title: "Φροντίδα που φαίνεται στην πράξη.",
       gallery_subtitle: "Εξερευνήστε. Εμπνευστείτε.",
@@ -627,16 +681,19 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_contact: "Contact",
       nav_book: "Book Appointment",
       hero_welcome: "Welcome to S&M Hair Salon",
-      hero_title: "Beautiful Color Starts with Healthy Hair.",
+      hero_title: "Your hair is in good hands.",
       hero_subtitle: "Hair coloring, balayage, and treatments that strengthen the hair fiber. For results that look beautiful long after your appointment.",
       hero_btn_explore: "Explore Services",
       hero_btn_book: "Book Appointment",
       philo_title: "Philosophy",
-      philo_heading: "Enhancing the natural beauty of your hair.",
-      philo_desc: "With expert artistry, specialized Malibu, K18 & Keratin treatments, and premium products, we bring your dream hair to life.",
+      philo_heading: "In good hands, for three generations.",
+      philo_desc: "S&M has been a family story for over 30 years. Everything we know, we learned alongside those who came before us, and we evolve it every day. That's why every client is treated like family.",
       feat_title: "Hair Services",
       feat_heading: "Haircuts, Coloring, Balayage & Specialized Treatments.",
       feat_view_all: "View All Services",
+      feat_subtext_p1: "There is no one-size-fits-all solution. There is only the solution that fits your hair.",
+      feat_subtext_p2: "Different hair thickness, different color history, different daily routine and morning styling time. That's why every appointment begins with a conversation and a close look at your hair condition before deciding what to do. Sometimes the answer is a color change. Other times, a treatment first and color after.",
+      feat_subtext_p3: "From haircuts and daily touch-ups to balayage and specialized treatments, you will find everything we offer in our full menu.",
       services_menu_title: "Service Menu",
       services_menu_heading: "Hair Salon Services",
       services_menu_subtitle: "Discover our specialized haircuts, hair coloring, balayage, Malibu, K18 & Keratin treatments, and extensions.",
@@ -846,6 +903,8 @@ document.addEventListener('DOMContentLoaded', () => {
       srv_custom_plan: "Custom Long-Term Hair Plan",
       srv_custom_plan_desc: "Long-term hair journey plan for maximum hair health.",
       book_btn: "Book Now",
+      services_menu_heading: "Care that shows in practice.",
+      services_menu_subtitle: "Explore. Get Inspired.",
       gallery_eyebrow: "Portfolio",
       gallery_title: "Care that shows in practice.",
       gallery_subtitle: "Explore. Get Inspired.",
