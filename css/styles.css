@@ -730,8 +730,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .showcase-image-card:first-child img {
-  transform: scale(1.18);
-  object-position: center;
+  transform: scale(1.35);
+  transform-origin: left center;
+  object-fit: cover;
+  object-position: left center;
 }
 
 @media (max-width: 992px) {
@@ -745,6 +747,333 @@ h1, h2, h3, h4, h5, h6 {
   .images-showcase-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
+  }
+}
+
+/* Homepage Philosophy: text over a faded hands illustration */
+#explore {
+  overflow-x: clip;
+}
+
+.philo-hands-wrap {
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+.philo-hands-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: none;
+  height: auto;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.philo-hands-text {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .philo-hands-bg {
+    width: 180%;
+  }
+}
+
+/* Philosophy Page Split Section */
+.philosophy-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.philosophy-text > p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.philosophy-section {
+  overflow-x: clip;
+}
+
+.philosophy-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Faded illustration: bleeds to the right edge of the page and
+   extends left behind the end of the text column */
+.philosophy-illustration {
+  position: relative;
+  z-index: 0;
+  display: block;
+  max-width: none;
+  margin-left: calc(-15% - 1rem);
+  width: calc(115% + 1rem + (100vw - 200% - 4rem) / 2);
+  height: auto;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Centered Filler Quote Section (Page Middle) */
+.philosophy-quote-container {
+  margin-top: 2.2rem;
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.philosophy-quote-centered {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.35rem;
+  line-height: 1.8;
+  color: var(--color-palette-berry);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+@media (max-width: 992px) {
+  .philosophy-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .philosophy-illustration {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Homepage Google Reviews Section */
+.reviews-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.reviews-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+
+.reviews-score-number {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 8vw, 5.6rem);
+  line-height: 1;
+  color: var(--color-text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+.reviews-score-number small {
+  font-family: var(--font-body);
+  font-size: 0.32em;
+  color: var(--color-text-muted);
+  margin-left: 0.4rem;
+}
+
+.review-stars {
+  color: var(--color-palette-berry);
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.reviews-score-stars {
+  font-size: 1.2rem;
+}
+
+.reviews-score-text {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 40ch;
+}
+
+.reviews-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 0.4rem;
+}
+
+.reviews-bar {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.reviews-bar-track {
+  position: relative;
+  height: 6px;
+  border-radius: 6px;
+  background-color: var(--pastel-blended-mid);
+  overflow: hidden;
+}
+
+.reviews-bar-track::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--w);
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--color-palette-pink), var(--color-palette-berry));
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.95rem 1.2rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  animation: reviewFadeIn 0.4s ease;
+}
+
+.review-card[hidden] {
+  display: none;
+}
+
+.review-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.review-author b {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  color: var(--color-text-main);
+}
+
+.review-author small {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: var(--color-text-muted);
+}
+
+.review-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-palette-berry-dark);
+  background: linear-gradient(135deg, var(--color-palette-cream), var(--color-palette-peach));
+}
+
+/* Reviews are cut to 3 lines so a full page of 3 fits on screen */
+.review-card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.review-card.is-expanded p {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: none;
+  overflow: visible;
+}
+
+.review-more-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-rounded);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-palette-berry);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.review-more-btn[hidden],
+.review-card.is-expanded .review-more-label,
+.review-card:not(.is-expanded) .review-less-label {
+  display: none;
+}
+
+.reviews-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reviews-page-count {
+  font-family: var(--font-rounded);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes reviewFadeIn {
+  from { opacity: 0.2; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-card { animation: none; }
+}
+
+@media (max-width: 992px) {
+  .reviews-split {
+    grid-template-columns: 1fr;
   }
 }
 

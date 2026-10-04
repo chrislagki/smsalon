@@ -325,6 +325,60 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
+   * 6c. Google Reviews Paging, 3 per page (index.html)
+   * ------------------------------------------------------------------------ */
+  const reviewCards = document.querySelectorAll('.review-card');
+  const reviewsNextBtn = document.querySelector('.reviews-next-btn');
+
+  if (reviewCards.length > 0 && reviewsNextBtn) {
+    const reviewsPerPage = 3;
+    const reviewPages = Math.ceil(reviewCards.length / reviewsPerPage);
+    const pageCurrentEl = document.querySelector('.reviews-page-current');
+    const pageTotalEl = document.querySelector('.reviews-page-total');
+    let reviewPage = 0;
+
+    // Show "More" only on reviews that are cut off at 3 lines
+    const updateMoreButtons = () => {
+      reviewCards.forEach(card => {
+        const moreBtn = card.querySelector('.review-more-btn');
+        const text = card.querySelector('p');
+        if (!moreBtn || !text || card.hidden) return;
+        const isCut = text.scrollHeight > text.clientHeight + 1;
+        moreBtn.hidden = !isCut && !card.classList.contains('is-expanded');
+      });
+    };
+
+    const showReviewPage = (page) => {
+      reviewPage = (page + reviewPages) % reviewPages;
+      reviewCards.forEach((card, i) => {
+        card.hidden = Math.floor(i / reviewsPerPage) !== reviewPage;
+        card.classList.remove('is-expanded');
+      });
+      if (pageCurrentEl) pageCurrentEl.textContent = reviewPage + 1;
+      updateMoreButtons();
+    };
+
+    if (pageTotalEl) pageTotalEl.textContent = reviewPages;
+    showReviewPage(0);
+
+    reviewsNextBtn.addEventListener('click', () => {
+      showReviewPage(reviewPage + 1);
+    });
+
+    reviewCards.forEach(card => {
+      const moreBtn = card.querySelector('.review-more-btn');
+      if (moreBtn) {
+        moreBtn.addEventListener('click', () => {
+          card.classList.toggle('is-expanded');
+        });
+      }
+    });
+
+    window.addEventListener('resize', updateMoreButtons);
+    if (document.fonts) document.fonts.ready.then(updateMoreButtons);
+  }
+
+  /* ------------------------------------------------------------------------
    * 7. Multilingual Language Switcher (Greek <-> English)
    * ------------------------------------------------------------------------ */
   const langBtns = document.querySelectorAll('.lang-btn');
@@ -334,16 +388,30 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_home: "Αρχική",
       nav_services: "Υπηρεσίες",
       nav_gallery: "Γκαλερί",
+      nav_philosophy: "Φιλοσοφία",
       nav_contact: "Επικοινωνία",
       nav_book: "Κλείστε Ραντεβού",
       hero_welcome: "Καλώς Ήρθατε στο S&M Hair Salon",
-      hero_title: "Τα μαλλιά σας είναι σε καλά χέρια.",
+      hero_title: "Το στυλ σου. Η ταυτότητα σου.",
       hero_subtitle: "Βαφές, balayage και θεραπείες που δυναμώνουν την τρίχα. Για αποτέλεσμα που φαίνεται όμορφο πολύ μετά το ραντεβού σας.",
       hero_btn_explore: "Ανακαλύψτε τις Υπηρεσίες",
       hero_btn_book: "Κλείστε Ραντεβού",
       philo_title: "Φιλοσοφία",
       philo_heading: "Σε καλά χέρια, εδώ και τρεις γενιές.",
       philo_desc: "Το S&M είναι οικογενειακή υπόθεση εδώ και 30 χρόνια. Ό,τι ξέρουμε το μάθαμε δίπλα σε αυτούς που ήταν πριν από εμάς, και το εξελίσσουμε κάθε μέρα. Γι' αυτό κάθε πελάτης αντιμετωπίζεται ως δικός μας άνθρωπος.",
+      philo_learn_more: "Μάθετε Περισσότερα",
+      philo_page_heading: "Η φιλοσοφία μας",
+      philo_page_p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.",
+      philo_page_p2: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum, nulla vitae elit libero, a pharetra augue.",
+      philo_page_p3: "Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.",
+      philo_quote: "«Εδώ θα προστεθεί το παράθεμα...»",
+      reviews_title: "Κριτικές",
+      reviews_count: "Από 330 κριτικές στο Google. Ευχαριστούμε κάθε πελάτη που μοιράστηκε την εμπειρία του.",
+      reviews_google_btn: "Διαβάστε τις στο Google",
+      reviews_source: "Κριτική Google",
+      reviews_next: "Επόμενες κριτικές",
+      reviews_more: "Περισσότερα",
+      reviews_less: "Λιγότερα",
       feat_title: "Υπηρεσίες Κομμωτηρίου",
       feat_heading: "Κουρέματα, Βαφές, Balayage & Εξειδικευμένες Θεραπείες.",
       feat_view_all: "Δείτε Όλες τις Υπηρεσίες",
@@ -678,16 +746,30 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_home: "Home",
       nav_services: "Services",
       nav_gallery: "Gallery",
+      nav_philosophy: "Philosophy",
       nav_contact: "Contact",
       nav_book: "Book Appointment",
       hero_welcome: "Welcome to S&M Hair Salon",
-      hero_title: "Your hair is in good hands.",
+      hero_title: "Your style. Your Identity.",
       hero_subtitle: "Hair coloring, balayage, and treatments that strengthen the hair fiber. For results that look beautiful long after your appointment.",
       hero_btn_explore: "Explore Services",
       hero_btn_book: "Book Appointment",
       philo_title: "Philosophy",
       philo_heading: "In good hands, for three generations.",
       philo_desc: "S&M has been a family story for over 30 years. Everything we know, we learned alongside those who came before us, and we evolve it every day. That's why every client is treated like family.",
+      philo_learn_more: "Learn More",
+      philo_page_heading: "Our Philosophy",
+      philo_page_p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.",
+      philo_page_p2: "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum, nulla vitae elit libero, a pharetra augue.",
+      philo_page_p3: "Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.",
+      philo_quote: "\"Filler quote text to be added here later...\"",
+      reviews_title: "Reviews",
+      reviews_count: "From 330 reviews on Google. Thank you to every client who shared their experience.",
+      reviews_google_btn: "Read them on Google",
+      reviews_source: "Google review",
+      reviews_next: "Next reviews",
+      reviews_more: "Read more",
+      reviews_less: "Show less",
       feat_title: "Hair Services",
       feat_heading: "Haircuts, Coloring, Balayage & Specialized Treatments.",
       feat_view_all: "View All Services",

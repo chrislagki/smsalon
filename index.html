@@ -62,6 +62,7 @@
       <ul class="drawer-links-list">
         <li><a href="index.html" class="drawer-link active" data-i18n="nav_home">Αρχική</a></li>
         <li><a href="services.html" class="drawer-link" data-i18n="nav_services">Υπηρεσίες</a></li>
+        <li><a href="philosophy.html" class="drawer-link" data-i18n="nav_philosophy">Φιλοσοφία</a></li>
         <li><a href="gallery.html" class="drawer-link" data-i18n="nav_gallery">Γκαλερί</a></li>
         <li><a href="contact.html" class="drawer-link" data-i18n="nav_contact">Επικοινωνία</a></li>
       </ul>
@@ -122,7 +123,7 @@
         <p class="eyebrow-title" data-i18n="hero_welcome">Καλώς Ήρθατε στο S&M Hair Salon</p>
       </div>
 
-      <h1 class="heading-hero" data-i18n="hero_title">Τα μαλλιά σας είναι σε καλά χέρια.</h1>
+      <h1 class="heading-hero" data-i18n="hero_title">Το στυλ σου. Η ταυτότητα σου.</h1>
       <p class="hero-subtitle-text" data-i18n="hero_subtitle">Βαφές, balayage και θεραπείες που δυναμώνουν την τρίχα. Για αποτέλεσμα που φαίνεται όμορφο πολύ μετά το ραντεβού σας.</p>
 
       <div class="hero-actions">
@@ -133,9 +134,13 @@
   </section>
 
   <!-- About / Introduction Section -->
-  <section id="explore" class="section section-lg">
+  <section id="explore" class="section section-lg" style="padding-bottom: 3rem;">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <div class="philo-hands-wrap">
+      <!-- Faded hands illustration behind the text -->
+      <img src="images/generations-hands.png" alt="" class="philo-hands-bg">
+
+      <div class="philo-hands-text">
         <div class="eyebrow">
           <div class="eyebrow-line"></div>
           <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
@@ -147,174 +152,156 @@
         <h2 class="heading-large philo-header-single" style="margin-bottom: 1.5rem;" data-i18n="philo_heading">Σε καλά χέρια, εδώ και τρεις γενιές.</h2>
         <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.8;" data-i18n="philo_desc">Το S&M είναι οικογενειακή υπόθεση εδώ και 30 χρόνια. Ό,τι ξέρουμε το μάθαμε δίπλα σε αυτούς που ήταν πριν από εμάς, και το εξελίσσουμε κάθε μέρα. Γι' αυτό κάθε πελάτης αντιμετωπίζεται ως δικός μας άνθρωπος.</p>
       </div>
+      </div>
 
-      <div class="images-showcase-row">
-        <div class="showcase-image-card">
-          <img src="images/together.png" alt="S&M Salon Philosophy 1">
-        </div>
-        <div class="showcase-image-card">
-          <img src="images/together 2.jpg" alt="S&M Salon Philosophy 2">
-        </div>
-        <div class="showcase-image-card">
-          <img src="images/together 3.png" alt="S&M Salon Philosophy 3">
-        </div>
-        <div class="showcase-image-card">
-          <img src="images/together 4.jpg" alt="S&M Salon Philosophy 4">
-        </div>
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <a href="philosophy.html" class="btn btn-outline" style="white-space: nowrap; font-size: 0.88rem; padding: 0.6rem 1.4rem;" data-i18n="philo_learn_more">Μάθετε Περισσότερα</a>
       </div>
     </div>
   </section>
 
-  <!-- Split 50/50 Featured Hair Services & Card Slider Section -->
-  <section class="section" style="background-color: var(--color-bg-subtle);">
+  <!-- Google Reviews Section: Score Left, Paged Reviews Right -->
+  <section class="section" style="background-color: var(--color-bg-subtle); padding-top: 2.5rem;" aria-labelledby="reviews-heading">
     <div class="container">
-      <!-- FULL-WIDTH CENTERED TOP HEADER -->
-      <div style="max-width: 1150px; width: 100%; margin: 0 auto 3rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <div class="eyebrow">
+      <!-- Centered Section Header -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="eyebrow" style="margin-bottom: 0;">
           <div class="eyebrow-line"></div>
           <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
-          <p class="eyebrow-title" data-i18n="feat_title">Υπηρεσίες Κομμωτηρίου</p>
+          <p class="eyebrow-title" id="reviews-heading" data-i18n="reviews_title">Κριτικές</p>
           <div class="eyebrow-dot-wrapper"><div class="eyebrow-dot"></div><div class="eyebrow-dot-border"></div></div>
           <div class="eyebrow-line"></div>
         </div>
-        <h2 class="heading-large feat-header-single" style="margin-bottom: 0.5rem;" data-i18n="feat_heading">Κουρέματα, Βαφές, Balayage & Εξειδικευμένες Θεραπείες.</h2>
       </div>
 
-      <div class="split-services-wrapper">
-        
-        <!-- LEFT COLUMN: Only the Subtext Paragraphs & Button (50% Width) -->
-        <div class="split-services-left">
-          <div class="subtext-content-block">
-            <p class="subtext-lead" data-i18n="feat_subtext_p1">Δεν υπάρχει μία λύση που ταιριάζει σε όλους. Υπάρχει αυτή που ταιριάζει στα δικά σας μαλλιά.</p>
-            <p data-i18n="feat_subtext_p2">Άλλο πάχος τρίχας, άλλο ιστορικό βαφής, άλλη καθημερινότητα και άλλος χρόνος για styling το πρωί. Γι' αυτό κάθε ραντεβού ξεκινά με μια κουβέντα και μια ματιά στην κατάσταση της τρίχας, πριν αποφασίσουμε τι θα κάνουμε. Μερικές φορές η απάντηση είναι μια αλλαγή χρώματος. Άλλες, μια θεραπεία πρώτα και το χρώμα μετά.</p>
-            <p data-i18n="feat_subtext_p3">Από το κούρεμα και το καθημερινό φρεσκάρισμα, μέχρι το balayage και τις εξειδικευμένες θεραπείες, θα βρείτε όλα όσα κάνουμε στο πλήρες μενού.</p>
+      <div class="reviews-split">
+
+        <!-- LEFT COLUMN: Google Score Summary -->
+        <div class="reviews-score">
+          <div class="reviews-score-number">4.8<small>/ 5</small></div>
+          <span class="review-stars reviews-score-stars" aria-label="4.8 / 5">★★★★★</span>
+          <p class="reviews-score-text" data-i18n="reviews_count">Από 330 κριτικές στο Google. Ευχαριστούμε κάθε πελάτη που μοιράστηκε την εμπειρία του.</p>
+
+          <div class="reviews-bars" aria-hidden="true">
+            <div class="reviews-bar"><span>5★</span><span class="reviews-bar-track" style="--w: 100%;"></span></div>
+            <div class="reviews-bar"><span>4★</span><span class="reviews-bar-track" style="--w: 2%;"></span></div>
+            <div class="reviews-bar"><span>3★</span><span class="reviews-bar-track" style="--w: 3%;"></span></div>
           </div>
 
-          <div style="margin-top: 1.8rem; text-align: left;">
-            <a href="services.html" class="btn btn-outline" style="white-space: nowrap; font-size: 0.88rem; padding: 0.6rem 1.4rem;" data-i18n="feat_view_all">Δείτε Όλες τις Υπηρεσίες</a>
+          <div>
+            <a href="https://maps.app.goo.gl/J3a6CErYusY6TDpDA" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="white-space: nowrap; font-size: 0.88rem; padding: 0.6rem 1.4rem;" data-i18n="reviews_google_btn">Διαβάστε τις στο Google</a>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: Service Card Slider with 7 Shuffle Cards (50% Width) -->
-        <div class="split-services-right">
-          <div class="service-cards-slider-container">
-            <div class="service-cards-slider-track">
-              
-              <!-- Slide 1: Balayage -->
-              <div class="slider-service-card active">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_color_title">Βαφές & Balayage</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_balayage">Balayage</h3>
-                    <p class="service-card-desc" data-i18n="srv_balayage_desc">Signature balayage για φυσικές, ομαλές μεταβάσεις χρώματος και ηλιόλουστο αποτέλεσμα.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+        <!-- RIGHT COLUMN: Reviews, 3 per page -->
+        <div class="reviews-list-wrapper">
+          <div class="reviews-list">
+
+            <article class="review-card">
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">Ν</span><div><b>Νίκη Σ.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Εξαιρετική εμπειρία! Τα κορίτσια ήταν απίστευτα επαγγελματίες, με υπομονή και πραγματικό ενδιαφέρον. Ανέλαβαν μια σχετικά δύσκολη κατάσταση και κυριολεκτικά έσωσαν το μαλλί μου. Μου εξήγησαν κάθε βήμα, πρόσεξαν την ποιότητα της τρίχας και το αποτέλεσμα ήταν πολύ καλύτερο απ' ό,τι περίμενα. Ένιωσα ασφάλεια και εμπιστοσύνη από την πρώτη στιγμή. Σίγουρα θα ξαναπάω και τις συστήνω ανεπιφύλακτα! Η Ειρήνη φανταστική, την προτείνω με κλειστά μάτια!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 2: Malibu HEADLAB -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_malibu_headlab">Malibu HEADLAB</h3>
-                    <p class="service-card-desc" data-i18n="srv_malibu_headlab_desc">Προηγμένη διάγνωση & θεραπεία εξυγίανσης τριχωτού και μαλλιών Malibu HEADLAB.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card">
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">V</span><div><b>Venia V.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Φεύγω από το κομμωτήριο με τη διάθεση μου στα ύψη!!! Τα κορίτσια είναι εξαιρετικά, ένα από τα ωραιότερα balayage που έχω κάνει και σε χρόνο dt. Μεγάλη αγάπη στην Ειρήνη και στην Αναστασία.</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 3: K18 -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_k18">Θεραπεία K18</h3>
-                    <p class="service-card-desc" data-i18n="srv_k18_desc">Επαναστατική μοριακή θεραπεία K18 για επανόρθωση της τρίχης σε 4 λεπτά.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card">
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">A</span><div><b>Alexandra T.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Το καλύτερο κομμωτήριο μακράν. Πολύ καλή δουλειά σε όλα. Το βασικό είναι όμως ότι κανένα από τα κορίτσια δεν θα κάνει ποτέ κάτι που δεν μας ταιριάζει ή που θα είναι βλαβερό για τα μαλλιά μας. Και η ειλικρίνεια είναι το παν!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 4: Extensions -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_extensions_title">Extensions</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_tapes">Τοποθέτηση Tapes</h3>
-                    <p class="service-card-desc" data-i18n="srv_tapes_desc">Εξειδικευμένη τοποθέτηση τρέσας/tapes extensions για φυσικό μήκος και όγκο.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">Ι</span><div><b>Ιωάννα Α.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Για ακόμη μια φορά, μετά την επίσκεψή μου στο συγκεκριμένο κομμωτήριο, έφυγα απολύτως ικανοποιημένη! Οι κοπέλες είναι πραγματικά υπέροχες, ξέρουν τη δουλειά τους άριστα και σε κάνουν να νιώθεις άνετα και όμορφα από τη στιγμή που μπαίνεις. Το αποτέλεσμα ήταν ακριβώς αυτό που ήθελα και έφυγα με χαμόγελο. Μετά από αρκετή αναζήτηση, νιώθω πως επιτέλους βρήκα το κομμωτήριο που μου ταιριάζει!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 5: Women's Cut -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_women_cut">Γυναικείο Κούρεμα</h3>
-                    <p class="service-card-desc" data-i18n="srv_women_cut_desc">Προσωποποιημένο γυναικείο κούρεμα ακριβείας προσαρμοσμένο στα χαρακτηριστικά και το στυλ σας.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">G</span><div><b>Georgie G.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Τα μαλλιά μου ήταν πολύ θαμπά και ταλαιπωρημένα. Με τη θεραπεία cocktail με πρωτεΐνες για λάμψη και ενυδάτωση έγιναν πιο λαμπερά από ποτέ! Να μην ξεχάσω το τέλειο blowout χτένισμα! Η Ειρήνη και η Αναστασία είναι εξαιρετικές! Θα το επισκεφτώ ξανά οπωσδήποτε!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 6: Keratin Treatment -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_therapy_title">Θεραπείες Μαλλιών</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_keratin">Θεραπεία Κερατίνης</h3>
-                    <p class="service-card-desc" data-i18n="srv_keratin_desc">Λειαντική θεραπεία ισιώματος & βαθιάς θρέψης κατά του φριζαρίσματος.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">Φ</span><div><b>Φωτεινή Η.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Το καλύτερο αποτέλεσμα που έχω κάνει ποτέ σε κομμωτήριο και το πιο γρήγορο! Όλα ήταν τέλεια, ευχαριστώ κορίτσια!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-              <!-- Slide 7: Styling -->
-              <div class="slider-service-card">
-                <div class="service-card" style="box-shadow: 0 10px 30px rgba(178, 87, 128, 0.08);">
-                  <div class="service-card-body">
-                    <div class="eyebrow" style="margin-bottom: 0.5rem;"><p class="eyebrow-title" style="font-size: 0.75rem;" data-i18n="cat_cuts_title">Κουρέματα & Styling</p></div>
-                    <h3 class="service-card-title" data-i18n="srv_styling">Χτένισμα</h3>
-                    <p class="service-card-desc" data-i18n="srv_styling_desc">Επαγγελματικό χτένισμα για εντυπωσιακές εμφανίσεις και διάρκεια.</p>
-                    <div class="service-card-footer">
-                      <button class="btn-circle btn-open-booking"><span data-i18n="book_btn">Κράτηση</span><div class="circle-icon">→</div></button>
-                    </div>
-                  </div>
-                </div>
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">Α</span><div><b>Αθηνά Λ.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
+              <p>Επισκέφτηκα σήμερα τα κορίτσια για κούρεμα. Υπέροχη εμπειρία από το λούσιμο μέχρι το τέλος! Μου έκαναν και μια ωραία ενυδάτωση και τα μαλλιά μου είναι τόσο λεία και απαλά, ειδικά στις άκρες που ήταν ταλαιπωρημένα από άλλες χρωστικές επεμβάσεις στα μαλλιά μου. Επίσης με ενημέρωσαν για τις πολλές θεραπείες μαλλιών που έχουν. Οι τιμές τους πολύ προσιτές και τα κορίτσια άψογα! Θα ξαναπάω σίγουρα!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
-            </div>
-
-            <!-- Slider Controls -->
-            <div class="slider-controls">
-              <button class="slider-arrow prev-slide" aria-label="Previous service">‹</button>
-              <div class="slider-dots">
-                <span class="slider-dot active" data-slide="0"></span>
-                <span class="slider-dot" data-slide="1"></span>
-                <span class="slider-dot" data-slide="2"></span>
-                <span class="slider-dot" data-slide="3"></span>
-                <span class="slider-dot" data-slide="4"></span>
-                <span class="slider-dot" data-slide="5"></span>
-                <span class="slider-dot" data-slide="6"></span>
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">E</span><div><b>Effie S.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
               </div>
-              <button class="slider-arrow next-slide" aria-label="Next service">›</button>
-            </div>
+              <p>Εμπιστεύτηκα τα κορίτσια για μια πολύ μεγάλη αλλαγή στα μαλλιά μου, και έμεινα απόλυτα ευχαριστημένη! Ήταν ακριβώς το αποτέλεσμα που ήθελα! Επίσης ο χώρος είναι πεντακάθαρος με πολύ όμορφη αισθητική και αύρα, κάτι που σε ηρεμεί και απολαμβάνεις χαλαρή τις υπηρεσίες τους!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
 
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">E</span><div><b>Ery S.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
+              </div>
+              <p>Πήγα την κόρη μου για να δωρίσουμε τα μαλάκια μας! Τα κορίτσια πολύ ευγενικά! Και είναι η πρώτη φορά που ασχολούνται τόσο πολύ με το κούρεμα του παιδιού μου σε κομμωτήριο! Εννοείται πως θα ξαναπάμε! Το συστήνω ανεπιφύλακτα!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
+
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">M</span><div><b>Marso M.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
+              </div>
+              <p>Φοβερός επαγγελματισμός, προσέγγιση και φροντίδα. Άριστα προϊόντα και υλικά. Ουσιαστική λεπτομερής δουλειά στα μαλλιά μου, που «χρωματίστηκαν» για πρώτη φορά. Πετύχατε αυτό που ζήτησα ακριβώς. Εξαιρετικά καθαρός χώρος, με αγαπημένο προσωπικό, ευγενικό και φιλόξενο. Σας ευχαριστώ πολύ. Keep going!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
+
+            <article class="review-card" hidden>
+              <div class="review-card-top">
+                <div class="review-author"><span class="review-avatar">N</span><div><b>Niki A.</b><small data-i18n="reviews_source">Κριτική Google</small></div></div>
+                <span class="review-stars" aria-label="5 / 5">★★★★★</span>
+              </div>
+              <p>Τα κορίτσια είναι όλα φανταστικά! Ευχάριστες, επαγγελματίες και πολύ ωραίο αποτέλεσμα! Περιποιημένος χώρος &amp; βολική τοποθεσία. Το βρήκαμε τυχαία το κομμωτήριο κ δεν θα μπορούσαμε να έχουμε κάνει καλύτερη επιλογή και για μακιγιάζ και για μαλλιά! Αναστασία, Ειρήνη και Ελίνα σας ευχαριστούμε!</p>
+              <button type="button" class="review-more-btn" hidden><span class="review-more-label" data-i18n="reviews_more">Περισσότερα</span><span class="review-less-label" data-i18n="reviews_less">Λιγότερα</span></button>
+            </article>
+
+          </div>
+
+          <!-- Paging Controls -->
+          <div class="reviews-controls">
+            <span class="reviews-page-count" aria-live="polite"><span class="reviews-page-current">1</span> / <span class="reviews-page-total">4</span></span>
+            <button type="button" class="btn btn-outline reviews-next-btn" style="font-size: 0.88rem; padding: 0.6rem 1.4rem;"><span data-i18n="reviews_next">Επόμενες κριτικές</span> →</button>
           </div>
         </div>
 
@@ -338,6 +325,7 @@
           <ul class="footer-links">
             <li><a href="index.html" data-i18n="nav_home">Αρχική</a></li>
             <li><a href="services.html" data-i18n="nav_services">Υπηρεσίες</a></li>
+            <li><a href="philosophy.html" data-i18n="nav_philosophy">Φιλοσοφία</a></li>
             <li><a href="gallery.html" data-i18n="nav_gallery">Γκαλερί</a></li>
             <li><a href="contact.html" data-i18n="nav_contact">Επικοινωνία</a></li>
           </ul>
