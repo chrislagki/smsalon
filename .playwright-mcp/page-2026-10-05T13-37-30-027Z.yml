@@ -1,0 +1,141 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - button "Open Navigation Menu" [ref=e5] [cursor=pointer]:
+        - generic [ref=e10]: Μενού
+      - link "S&M Hair Salon HAIR & BEAUTY SALON" [ref=e12] [cursor=pointer]:
+        - /url: index.html
+        - img "S&M Hair Salon" [ref=e13]
+        - generic [ref=e14]: HAIR & BEAUTY SALON
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - button "EL" [ref=e17] [cursor=pointer]
+          - generic [ref=e18]: "|"
+          - button "EN" [ref=e19] [cursor=pointer]
+        - button "Κλείστε Ραντεβού" [ref=e20] [cursor=pointer]
+  - complementary [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - link "S&M Hair Salon HAIR & BEAUTY SALON" [ref=e24] [cursor=pointer]:
+          - /url: index.html
+          - img "S&M Hair Salon" [ref=e25]
+          - generic [ref=e26]: HAIR & BEAUTY SALON
+        - button "Close Navigation Menu" [ref=e27] [cursor=pointer]: ✕
+      - list [ref=e28]:
+        - listitem [ref=e29]:
+          - link "Αρχική" [ref=e30] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=e31]:
+          - link "Υπηρεσίες" [ref=e32] [cursor=pointer]:
+            - /url: services.html
+        - listitem [ref=e33]:
+          - link "Φιλοσοφία" [ref=e34] [cursor=pointer]:
+            - /url: philosophy.html
+        - listitem [ref=e35]:
+          - link "Γκαλερί" [ref=e36] [cursor=pointer]:
+            - /url: gallery.html
+        - listitem [ref=e37]:
+          - link "Επικοινωνία" [ref=e38] [cursor=pointer]:
+            - /url: contact.html
+    - generic [ref=e39]:
+      - paragraph [ref=e40]: Διεύθυνση
+      - paragraph [ref=e41]:
+        - link "Σκύρου 2, Γαλάτσι" [ref=e42] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/J3a6CErYusY6TDpDA
+      - paragraph [ref=e43]: Τηλέφωνο
+      - paragraph [ref=e44]:
+        - link "210 2917238" [ref=e45] [cursor=pointer]:
+          - /url: tel:+302102917238
+      - button "Κλείστε Ραντεβού" [ref=e46] [cursor=pointer]
+  - generic [ref=e48]:
+    - paragraph [ref=e55]: Φιλοσοφία
+    - generic [ref=e61]:
+      - heading "Η τέχνη περνάει από χέρι σε χέρι." [level=1] [ref=e62]
+      - paragraph [ref=e63]: "Τρεις γενιές και 30 χρόνια S&M. Όσα ξέρουμε τα μάθαμε δίπλα σε αυτούς που ήταν πριν από εμάς, και κάποια πράγματα δεν αλλάζουν ποτέ: η λεπτομέρεια μετράει, και η εμπιστοσύνη κερδίζεται."
+      - paragraph [ref=e64]: "Στα τόσα χρόνια το καταλάβαμε: η δουλειά μας δεν είναι μόνο τεχνική. Είναι να καταλάβουμε τον άνθρωπο απέναντί μας. Πώς είναι η καθημερινότητά σας, τι σας ταιριάζει, τι σας κάνει να νιώθετε ωραία."
+      - paragraph [ref=e65]: Έτσι δουλεύουμε εδώ και τρεις γενιές, και έτσι γίνονται οι πελάτες μας άνθρωποι που βλέπουμε για χρόνια.
+    - blockquote [ref=e67]: «Εδώ θα προστεθεί το παράθεμα...»
+  - generic:
+    - generic:
+      - button "✕"
+      - generic:
+        - paragraph: Κλείστε Ραντεβού
+      - heading "Κλείστε το Ραντεβού σας" [level=3]
+      - paragraph: Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.Κλείσε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σου και δώσε στα μαλλιά σου την προσοχή που τους αξίζουν.
+      - generic:
+        - link "210 2917238":
+          - /url: tel:+302102917238
+        - link "DM Instagram":
+          - /url: https://www.instagram.com/sm_hairsalon_maryvitsa/
+  - contentinfo [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e72]:
+          - img "S&M Hair Salon" [ref=e73]
+          - generic [ref=e74]: HAIR & BEAUTY SALON
+        - generic [ref=e75]:
+          - heading "Εξερεύνηση" [level=4] [ref=e76]
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - link "Αρχική" [ref=e79] [cursor=pointer]:
+                - /url: index.html
+            - listitem [ref=e80]:
+              - link "Υπηρεσίες" [ref=e81] [cursor=pointer]:
+                - /url: services.html
+            - listitem [ref=e82]:
+              - link "Φιλοσοφία" [ref=e83] [cursor=pointer]:
+                - /url: philosophy.html
+            - listitem [ref=e84]:
+              - link "Γκαλερί" [ref=e85] [cursor=pointer]:
+                - /url: gallery.html
+            - listitem [ref=e86]:
+              - link "Επικοινωνία" [ref=e87] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=e88]:
+          - heading "Πληροφορίες" [level=4] [ref=e89]
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - link "Σκύρου 2, Γαλάτσι" [ref=e92] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/J3a6CErYusY6TDpDA
+            - listitem [ref=e93]:
+              - link "210 2917238" [ref=e94] [cursor=pointer]:
+                - /url: tel:+302102917238
+            - listitem [ref=e95]:
+              - link "Instagram" [ref=e96] [cursor=pointer]:
+                - /url: https://www.instagram.com/sm_hairsalon_maryvitsa/
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - generic [ref=e104]: Δευτέρα
+            - generic [ref=e105]: Κλειστά
+          - generic [ref=e106]:
+            - generic [ref=e107]: Τρίτη
+            - generic [ref=e108]:
+              - generic [ref=e109]: 09:00 - 14:00
+              - generic [ref=e110]: 17:00 - 20:30
+          - generic [ref=e111]:
+            - generic [ref=e112]: Τετάρτη
+            - generic [ref=e113]: 09:00 - 15:30
+          - generic [ref=e115]:
+            - generic [ref=e116]: Πέμπτη
+            - generic [ref=e117]:
+              - generic [ref=e118]: 09:00 - 14:00
+              - generic [ref=e119]: 17:00 - 20:30
+          - generic [ref=e120]:
+            - generic [ref=e121]: Παρασκευή
+            - generic [ref=e122]: 09:00 - 20:00
+          - generic [ref=e124]:
+            - generic [ref=e125]: Σάββατο
+            - generic [ref=e126]: 09:00 - 17:00
+          - generic [ref=e128]:
+            - generic [ref=e129]: Κυριακή
+            - generic [ref=e130]: Κλειστά
+      - generic [ref=e131]:
+        - paragraph [ref=e132]: © 2026 S&M Hair Salon
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - img "S&M Hair Salon" [ref=e135]
+            - generic [ref=e136]: HAIR & BEAUTY SALON
+          - generic [ref=e137]:
+            - text: CRAFTED BY
+            - link "INDIGO PHOENIX" [ref=e138] [cursor=pointer]:
+              - /url: https://www.instagram.com/indigo.phoenix.media/
