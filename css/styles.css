@@ -517,7 +517,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   transform: translateX(-100%);
   transition: transform var(--transition-smooth);
 }
@@ -569,7 +569,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .drawer-footer-info {
-  margin-top: auto;
+  margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
@@ -2385,5 +2385,44 @@ textarea.form-control {
 
   .footer-brand-logo-img {
     height: 64px;
+  }
+}
+
+/* Services heading: two lines on mobile (one per sentence), single line on desktop */
+.mobile-br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-br {
+    display: inline;
+  }
+
+  /* Footer bottom: copyright left, logo + credit right */
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: left;
+  }
+
+  .footer-legal {
+    align-items: flex-start;
+  }
+
+  .footer-copyright-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-bottom .brand-logo-img {
+    height: 40px;
+  }
+
+  .footer-bottom .crafted-by-text {
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 }
