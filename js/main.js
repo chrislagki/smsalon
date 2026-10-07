@@ -173,6 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    const categorySelect = document.getElementById('service-category-select');
+    if (categorySelect) {
+      categorySelect.addEventListener('change', () => {
+        document.querySelector(`.filter-tab-btn[data-filter="${categorySelect.value}"]`)?.click();
+      });
+      filterTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categorySelect.value = btn.getAttribute('data-filter');
+        });
+      });
+    }
+
     const activeInitialTab = document.querySelector('.filter-tab-btn.active');
     if (activeInitialTab) {
       activeInitialTab.click();
@@ -649,7 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
       form_message_label: "Μήνυμα",
       form_submit_btn: "Αποστολή Μηνύματος",
       modal_title: "Κλείστε το Ραντεβού&nbsp;σας",
-      modal_subtitle: "Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.<br><br>Κλείσε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σου και δώσε στα μαλλιά σου την προσοχή που τους αξίζουν.",
+      modal_subtitle: "Για να διασφαλίσουμε την προσωπική φροντίδα κάθε πελάτη, οι κρατήσεις γίνονται αποκλειστικά μέσω τηλεφώνου ή μηνύματος στο Instagram.<br><br>Κλείστε τώρα το δωρεάν Συμβουλευτικό Ραντεβού σας και δώστε στα μαλλιά σας την προσοχή που τους αξίζουν.",
       modal_call: "210 2917238",
       modal_ig: "DM Instagram",
       footer_desc: "Το S&M είναι ένα σύγχρονο πολυτελές hair salon αφιερωμένο στο κούρεμα ακριβείας, τις εξειδικευμένες τεχνικές χρώματος, τις θεραπείες Malibu & K18 και την τοποθέτηση extensions.",
@@ -740,7 +752,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="closed-pill">Κλειστά</span>
   </div>
 </div>`,
-      footer_rights: "© 2026 S&M Hair Salon"
+      footer_rights: "© 2026 S&M Hair Salon",
+      privacy_link: "Πολιτική Απορρήτου",
+      privacy_title: "Πολιτική Απορρήτου",
+      privacy_body: "<p class=\"privacy-updated\">Τελευταία ενημέρωση: Οκτώβριος 2026</p>\n<h4>1. Υπεύθυνος επεξεργασίας</h4>\n<p>S&M Hair Salon & Beauty Studio. Σεβόμαστε το απόρρητό σας και επεξεργαζόμαστε προσωπικά δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΓΚΠΔ/GDPR) και την ελληνική νομοθεσία.</p>\n<h4>2. Ποια δεδομένα συλλέγουμε</h4>\n<p>Προσωπικά δεδομένα μάς γνωστοποιείτε μόνο όταν επικοινωνείτε μαζί μας τηλεφωνικά ή μέσω μηνύματος στο Instagram, π.χ. όνομα, αριθμό τηλεφώνου, την υπηρεσία που σας ενδιαφέρει και την επιθυμητή ημερομηνία και ώρα.</p>\n<h4>3. Σκοπός και νομική βάση</h4>\n<p>Χρησιμοποιούμε τα στοιχεία αυτά αποκλειστικά για να οργανώσουμε και να επιβεβαιώσουμε το ραντεβού σας και να απαντήσουμε στα ερωτήματά σας (εκτέλεση σύμβασης ή προσυμβατικά μέτρα, άρθρο 6 παρ. 1 β΄ ΓΚΠΔ). Δεν τα πωλούμε και δεν τα χρησιμοποιούμε για διαφημιστικούς σκοπούς χωρίς τη συγκατάθεσή σας.</p>\n<h4>4. Υπηρεσίες τρίτων</h4>\n<p>Ο ιστότοπος φορτώνει γραμματοσειρές από το Google Fonts, με αποτέλεσμα η διεύθυνση IP σας να διαβιβάζεται στη Google. Οι σύνδεσμοι προς Google Maps και Instagram οδηγούν σε εξωτερικούς ιστότοπους με δική τους πολιτική απορρήτου, για την οποία δεν φέρουμε ευθύνη. Οι κρατήσεις μέσω Instagram υπόκεινται και στους όρους της Meta.</p>\n<h4>5. Cookies</h4>\n<p>Ο ιστότοπος δεν χρησιμοποιεί cookies παρακολούθησης, στατιστικών ή διαφήμισης.</p>\n<h4>6. Διατήρηση δεδομένων</h4>\n<p>Τα στοιχεία επικοινωνίας και ραντεβού διατηρούνται μόνο για όσο χρόνο είναι αναγκαίο για τους παραπάνω σκοπούς ή όσο απαιτείται από τη νομοθεσία, και στη συνέχεια διαγράφονται.</p>\n<h4>7. Τα δικαιώματά σας</h4>\n<p>Έχετε δικαίωμα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού και εναντίωσης στην επεξεργασία, καθώς και φορητότητας των δεδομένων σας. Για να τα ασκήσετε, επικοινωνήστε μαζί μας στο 210 2917238 ή μέσω Instagram. Έχετε επίσης το δικαίωμα να υποβάλετε καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (<a href=\"https://www.dpa.gr\" target=\"_blank\" rel=\"noopener noreferrer\">www.dpa.gr</a>).</p>\n<h4>8. Αλλαγές</h4>\n<p>Μπορεί να ενημερώνουμε την παρούσα πολιτική. Η ισχύουσα έκδοση δημοσιεύεται πάντα σε αυτή τη σελίδα.</p>"
     },
     en: {
       nav_home: "Home",
@@ -1098,7 +1113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="closed-pill">Closed</span>
   </div>
 </div>`,
-      footer_rights: "© 2026 S&M Hair Salon"
+      footer_rights: "© 2026 S&M Hair Salon",
+      privacy_link: "Privacy Policy",
+      privacy_title: "Privacy Policy",
+      privacy_body: "<p class=\"privacy-updated\">Last updated: October 2026</p>\n<h4>1. Data controller</h4>\n<p>S&M Hair Salon & Beauty Studio. We respect your privacy and process personal data in accordance with the General Data Protection Regulation (GDPR) and Greek law.</p>\n<h4>2. What data we collect</h4>\n<p>We only receive personal data when you contact us by phone or by Instagram message, for example your name, phone number, the service you are interested in and your preferred date and time.</p>\n<h4>3. Purpose and legal basis</h4>\n<p>We use this information solely to arrange and confirm your appointment and to answer your questions (performance of a contract or pre-contractual steps, Art. 6(1)(b) GDPR). We do not sell it, and we do not use it for marketing without your consent.</p>\n<h4>4. Third-party services</h4>\n<p>The website loads fonts from Google Fonts, which means your IP address is transmitted to Google. Links to Google Maps and Instagram lead to external websites with their own privacy policies, for which we are not responsible. Bookings made via Instagram are also subject to Meta's terms.</p>\n<h4>5. Cookies</h4>\n<p>This website does not use tracking, analytics or advertising cookies.</p>\n<h4>6. Data retention</h4>\n<p>Contact and appointment details are kept only for as long as necessary for the purposes above or as required by law, and are then deleted.</p>\n<h4>7. Your rights</h4>\n<p>You have the right to access, rectify, erase, restrict or object to the processing of your data, and the right to data portability. To exercise them, contact us on 210 2917238 or via Instagram. You also have the right to lodge a complaint with the Hellenic Data Protection Authority (<a href=\"https://www.dpa.gr\" target=\"_blank\" rel=\"noopener noreferrer\">www.dpa.gr</a>).</p>\n<h4>8. Changes</h4>\n<p>We may update this policy. The current version is always published on this page.</p>"
     }
   };
 
@@ -1181,5 +1199,116 @@ document.addEventListener('DOMContentLoaded', () => {
       setLanguage(selectedLang);
     });
   });
+
+  /* ------------------------------------------------------------------------
+   * Mobile: shrink .fit-one-line headings until they fit on a single line
+   * ------------------------------------------------------------------------ */
+  const fitHeadings = document.querySelectorAll('.fit-one-line');
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+  const fitOneLine = (el) => {
+    el.style.removeProperty('font-size');
+    if (!mobileQuery.matches) return;
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    el.style.setProperty('white-space', 'nowrap', 'important');
+    while (el.scrollWidth > el.clientWidth && size > 10) {
+      size -= 0.5;
+      el.style.setProperty('font-size', size + 'px', 'important');
+    }
+  };
+
+  if (fitHeadings.length > 0) {
+    const fitAll = () => fitHeadings.forEach(el => {
+      el.style.removeProperty('white-space');
+      fitOneLine(el);
+    });
+    fitAll();
+    window.addEventListener('resize', fitAll);
+    window.addEventListener('load', fitAll);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+    fitHeadings.forEach(el => {
+      new MutationObserver(() => fitOneLine(el)).observe(el, { childList: true, characterData: true, subtree: true });
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+   * Privacy Policy Popup (footer link on every page)
+   * ------------------------------------------------------------------------ */
+  const privacyLinks = document.querySelectorAll('.privacy-link');
+  if (privacyLinks.length > 0) {
+    const privacyModal = document.createElement('div');
+    privacyModal.className = 'lightbox-modal privacy-modal';
+    privacyModal.setAttribute('role', 'dialog');
+    privacyModal.setAttribute('aria-modal', 'true');
+    privacyModal.setAttribute('aria-labelledby', 'privacy-modal-title');
+    privacyModal.innerHTML = `
+      <div class="booking-wizard-card privacy-card">
+        <button type="button" class="privacy-close" aria-label="Close">✕</button>
+        <h3 id="privacy-modal-title" class="heading-medium privacy-title" data-i18n="privacy_title">${translations.el.privacy_title}</h3>
+        <div class="privacy-body" data-i18n="privacy_body">${translations.el.privacy_body}</div>
+      </div>`;
+    document.body.appendChild(privacyModal);
+
+    const privacyBody = privacyModal.querySelector('.privacy-body');
+    const openPrivacy = () => {
+      privacyBody.scrollTop = 0;
+      privacyModal.classList.add('active');
+      document.body.classList.add('no-scroll');
+    };
+    const closePrivacy = () => {
+      privacyModal.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    };
+
+    privacyLinks.forEach(link => link.addEventListener('click', openPrivacy));
+    privacyModal.querySelector('.privacy-close').addEventListener('click', closePrivacy);
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal) closePrivacy();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && privacyModal.classList.contains('active')) closePrivacy();
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+   * Mobile services: give every card the height of the tallest one
+   * ------------------------------------------------------------------------ */
+  const servicesGrid = document.querySelector('.services-grid');
+  if (servicesGrid) {
+    const mobileCards = window.matchMedia('(max-width: 768px)');
+    let equalizeQueued = false;
+
+    const equalizeServiceCards = () => {
+      equalizeQueued = false;
+      servicesGrid.style.removeProperty('--service-card-h');
+      if (!mobileCards.matches) return;
+
+      const cards = [...servicesGrid.querySelectorAll('.service-card')];
+      const hidden = cards.filter(card => card.style.display === 'none');
+      hidden.forEach(card => { card.style.display = 'flex'; });
+
+      servicesGrid.classList.add('is-measuring');
+      let tallest = 0;
+      cards.forEach(card => {
+        tallest = Math.max(tallest, card.getBoundingClientRect().height);
+      });
+      servicesGrid.classList.remove('is-measuring');
+
+      hidden.forEach(card => { card.style.display = 'none'; });
+      servicesGrid.style.setProperty('--service-card-h', Math.ceil(tallest) + 'px');
+    };
+
+    const queueEqualize = () => {
+      if (equalizeQueued) return;
+      equalizeQueued = true;
+      requestAnimationFrame(equalizeServiceCards);
+    };
+
+    queueEqualize();
+    window.addEventListener('resize', queueEqualize);
+    window.addEventListener('load', queueEqualize);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(queueEqualize);
+    new MutationObserver(queueEqualize).observe(servicesGrid, { childList: true, characterData: true, subtree: true });
+  }
 
 });
